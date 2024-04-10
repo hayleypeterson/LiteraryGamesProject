@@ -1,12 +1,6 @@
 ~ start
 
-May: My room is pretty empty. 
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+May: Weird. I don't remember how this ended up here.
+May: Oh well.
 
 => END

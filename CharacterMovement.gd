@@ -1,7 +1,8 @@
 extends CharacterBody2D
-@export var movement_speed : float
+@export var movement_speed : float = 50
 @export var force_coefficient = 20
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 func _process(_delta):
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -29,8 +30,11 @@ func get_input(delta):
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogues/main.dialogue"), "start")
-			return
+			#DialogueManager.show_example_dialogue_balloon(load("res://dialogues/main.dialogue"), "start")
+			var actionables = actionable_finder.get_overlapping_areas()
+			if actionables.size() > 0:
+				actionables[0].action()
+				return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
