@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4qe3b"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3idq8"]
 
 [resource]
-script = ExtResource("1_4qe3b")
+script = ExtResource("1_3idq8")
 using_states = PackedStringArray()
 titles = {
+"end_dialogue": "20",
 "start": "3"
 }
 character_names = PackedStringArray("May")
@@ -17,41 +18,275 @@ lines = {
 "text": "start",
 "type": &"title"
 },
-"3": {
+"10": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
+"id": "10",
+"next_id": "11",
 "notes": "",
+"parent_id": "9",
 "tags": PackedStringArray(),
-"text": "Weird. I don't remember how this ended up here.",
+"text": "I guess I should make it, at least.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Weird. I don't remember how this ended up here.",
+"translation_key": "I guess I should make it, at least.",
 "type": &"dialogue"
+},
+"11": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "There. That's better.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There. That's better.",
+"type": &"dialogue"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_bed"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "made"
+}]),
+"is_blocking": true
+},
+"next_id": "13",
+"parent_id": "9",
+"type": &"mutation"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "20",
+"parent_id": "9",
+"type": &"goto"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"next_id_after": "15",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "Leave it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave it",
+"type": &"response"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_bed"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "seen"
+}]),
+"is_blocking": true
+},
+"next_id": "17",
+"parent_id": "7",
+"type": &"mutation"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "20",
+"type": &"goto"
+},
+"19": {
+"id": "19",
+"next_id": "20",
+"text": "end_dialogue",
+"type": &"title"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "frozen"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "21",
+"type": &"mutation"
+},
+"21": {
+"id": "21",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_bed"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "seen"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "5",
+"next_id": "4",
+"next_id_after": "17",
+"type": &"condition"
 },
 "4": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
-"next_id": "6",
+"next_id": "17",
 "notes": "",
+"parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Oh well.",
+"text": "Just my bed. Looks the same as before.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Oh well.",
+"translation_key": "Just my bed. Looks the same as before.",
 "type": &"dialogue"
 },
+"5": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_bed"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "made"
+}, {
+"type": "colon"
+}])
+},
+"id": "5",
+"next_conditional_id": "7",
+"next_id": "6",
+"next_id_after": "17",
+"type": &"condition"
+},
 "6": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
 "id": "6",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"next_id": "17",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "Just my bed. Looks a little better now that it's made!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Just my bed. Looks a little better now that it's made!",
+"type": &"dialogue"
+},
+"7": {
+"id": "7",
+"next_conditional_id": "17",
+"next_id": "8",
+"next_id_after": "17",
+"type": &"condition"
+},
+"8": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.",
+"type": &"dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"next_id_after": "15",
+"notes": "",
+"parent_id": "7",
+"responses": PackedStringArray("9", "14"),
+"tags": PackedStringArray(),
+"text": "Make bed",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Make bed",
+"type": &"response"
 }
 }
 raw_text = "~ start
 
-May: Weird. I don't remember how this ended up here.
-May: Oh well.
+if State.saw_bed == \"seen\":
+	May: Just my bed. Looks the same as before.
+elif State.saw_bed == \"made\":
+	May: Just my bed. Looks a little better now that it's made!
+else: 
+	May: This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.
+	- Make bed
+		May: I guess I should make it, at least.
+		May: There. That's better.
+		set State.saw_bed = \"made\"
+		=> end_dialogue
+	- Leave it
+	set State.saw_bed = \"seen\"
 
+=> end_dialogue
+
+~ end_dialogue
+set State.frozen = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

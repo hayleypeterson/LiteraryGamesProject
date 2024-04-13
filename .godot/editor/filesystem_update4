@@ -1,6 +1,6 @@
 res://scene1.tscn
-res://CharacterMovement.gd
 res://helpers/actionable.tscn
-res://helpers/actionable.gd
-res://characters/may.tscn
-res://Direction.gd
+res://scripts/state.gd
+res://dialogues/balloon.tscn
+res://scripts/CharacterMovement.gd
+res://dialogues/balloon.gd

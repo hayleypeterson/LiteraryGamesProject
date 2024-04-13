@@ -1,6 +1,21 @@
 ~ start
 
-May: Weird. I don't remember how this ended up here.
-May: Oh well.
+if State.saw_bed == "seen":
+	May: Just my bed. Looks the same as before.
+elif State.saw_bed == "made":
+	May: Just my bed. Looks a little better now that it's made!
+else: 
+	May: This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.
+	- Make bed
+		May: I guess I should make it, at least.
+		May: There. That's better.
+		set State.saw_bed = "made"
+		=> end_dialogue
+	- Leave it
+	set State.saw_bed = "seen"
 
+=> end_dialogue
+
+~ end_dialogue
+set State.frozen = false
 => END

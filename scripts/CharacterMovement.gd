@@ -4,19 +4,23 @@ extends CharacterBody2D
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
-func _process(_delta):
-	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
-	if input_direction.y > 0: #walking "downward"
-		_animated_sprite.play("walk_down")
-	elif input_direction.y < 0:
-		_animated_sprite.play("walk_up")
-		# Flip the sprite based on the input direction
-	elif input_direction.x != 0:
-		if input_direction.x > 0:
-			_animated_sprite.play("walk_right")  # Facing right
+func _process(_delta):
+	if (!State.frozen):
+		var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+
+		if input_direction.y > 0: #walking "downward"
+			_animated_sprite.play("walk_down")
+		elif input_direction.y < 0:
+			_animated_sprite.play("walk_up")
+			# Flip the sprite based on the input direction
+		elif input_direction.x != 0:
+			if input_direction.x > 0:
+				_animated_sprite.play("walk_right")  # Facing right
+			else:
+				_animated_sprite.play("walk_left")  # Facing left
 		else:
-			_animated_sprite.play("walk_left")  # Facing left
+			_animated_sprite.stop()
 	else:
 		_animated_sprite.stop()
 
@@ -32,9 +36,11 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 			#DialogueManager.show_example_dialogue_balloon(load("res://dialogues/main.dialogue"), "start")
 			var actionables = actionable_finder.get_overlapping_areas()
-			if actionables.size() > 0:
+			if actionables.size() > 0:	
+				State.frozen = true
 				actionables[0].action()
 				return
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -42,7 +48,9 @@ func _physics_process(delta):
 
 	var pre_collision_velocity
 	pre_collision_velocity = velocity # velocity goes to 0,0 when we collide, which is why we record the velocity prior to the move_and_slide() func call
-	move_and_slide()
+	
+	if (!State.frozen):
+		move_and_slide()
 
 	for i in get_slide_collision_count():
 		var collision : KinematicCollision2D = get_slide_collision(i)

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://wmk0p2xbov5g" path="res://tilesets/New Piskel (1).png" id="2_368ba"]
 [ext_resource type="Texture2D" uid="uid://dxkgjj2ddn487" path="res://maysprite/walk_forward/fwalk3.png" id="3_8te7q"]
 [ext_resource type="Texture2D" uid="uid://bxgmae1o3yxgp" path="res://maysprite/walk_forward/fwalk4.png" id="4_neie8"]
-[ext_resource type="Script" path="res://CharacterMovement.gd" id="5_rmnmo"]
+[ext_resource type="Script" path="res://scripts/CharacterMovement.gd" id="5_rmnmo"]
 [ext_resource type="Texture2D" uid="uid://2pbh2vjnmy18" path="res://maysprite/walk_left/lwalk1.png" id="6_04iou"]
 [ext_resource type="Texture2D" uid="uid://bi1thapl5r4kk" path="res://maysprite/walk_backward/bwalk1.png" id="6_ns0a0"]
 [ext_resource type="Texture2D" uid="uid://c4cej6xvbasfh" path="res://maysprite/walk_left/lwalk2.png" id="7_ovae5"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://p3o10j8eb6wd" path="res://maysprite/maysprite-6.png.png" id="10_ld7a5"]
 [ext_resource type="Texture2D" uid="uid://b78wtjkki7okx" path="res://maysprite/maysprite-8.png.png" id="11_r142e"]
 [ext_resource type="Texture2D" uid="uid://by0gh12jkysoj" path="res://icon.svg" id="18_7bdkp"]
-[ext_resource type="Script" path="res://Direction.gd" id="18_luf37"]
+[ext_resource type="Script" path="res://scripts/Direction.gd" id="18_luf37"]
 [ext_resource type="PackedScene" uid="uid://cms2ynyg6r3f6" path="res://helpers/actionable.tscn" id="19_1xavs"]
 [ext_resource type="Resource" uid="uid://33effrdfnbo6" path="res://dialogues/main.dialogue" id="20_nggfk"]
 
@@ -174,8 +174,8 @@ radius = 8.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri2sx"]
 size = Vector2(11, 10)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1pcsv"]
-radius = 8.06226
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvo1j"]
+size = Vector2(12, 12)
 
 [node name="Node2D" type="Node2D"]
 
@@ -211,7 +211,7 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="May/Direction/ActionableFinder"]
-position = Vector2(0, 10)
+position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_lpavh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -230,4 +230,4 @@ texture = ExtResource("18_7bdkp")
 dialogue_resource = ExtResource("20_nggfk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Actionable"]
-shape = SubResource("CircleShape2D_1pcsv")
+shape = SubResource("RectangleShape2D_dvo1j")
