@@ -1,8 +1,8 @@
-res://scripts
+res://
 res://characters
+res://scripts
 res://helpers
 res://maysprite
 res://maysprite/walk_left
 res://maysprite/walk_backward
-res://
 res://maysprite/walk_forward

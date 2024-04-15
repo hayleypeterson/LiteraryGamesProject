@@ -1,8 +1,10 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1713038424
+::res://::1713209543
+DoorArea.gd::GDScript::-1::1713042638::0::1::::<>Area2D<>::
+hallway.tscn::PackedScene::620746771473783639::1713044528::0::1::::<><>::uid://csk3j0rmbyokt::::res://tilesets/Terrains_Dirt_Grass_Sand_Cliffs.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn
 icon.svg::CompressedTexture2D::4122940585111375469::1711472027::1711472052::1::::<><>::
-README.md::TextFile::-1::1712787012::0::1::::<><>::
-scene1.tscn::PackedScene::5141820191641246369::1713038753::0::1::::<><>::uid://wbk4vfb2qsgk::::res://maysprite/walk_forward/fwalk1.png<>uid://bmqupp8jmh6lq::::res://tilesets/simple room.png<>uid://chodoepj0dxyf::::res://maysprite/walk_forward/fwalk2.png<>uid://wmk0p2xbov5g::::res://tilesets/New Piskel (1).png<>uid://dxkgjj2ddn487::::res://maysprite/walk_forward/fwalk3.png<>uid://bxgmae1o3yxgp::::res://maysprite/walk_forward/fwalk4.png<>res://scripts/CharacterMovement.gd<>uid://2pbh2vjnmy18::::res://maysprite/walk_left/lwalk1.png<>uid://bi1thapl5r4kk::::res://maysprite/walk_backward/bwalk1.png<>uid://c4cej6xvbasfh::::res://maysprite/walk_left/lwalk2.png<>uid://cuels6vfaiou7::::res://maysprite/walk_backward/bwalk2.png<>uid://cc323ai5bvc3::::res://maysprite/walk_left/lwalk4.png<>uid://c5pb2mrwkbot0::::res://maysprite/walk_backward/bwalk3.png<>uid://buqesnbj7esrj::::res://maysprite/maysprite-7.png.png<>uid://cx27iylttqksh::::res://maysprite/walk_backward/bwalk4.png<>uid://p3o10j8eb6wd::::res://maysprite/maysprite-6.png.png<>uid://b78wtjkki7okx::::res://maysprite/maysprite-8.png.png<>uid://by0gh12jkysoj::::res://icon.svg<>res://scripts/Direction.gd<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
+README.md::TextFile::-1::1713039549::0::1::::<><>::
+scene1.tscn::PackedScene::5141820191641246369::1713044528::0::1::::<><>::uid://wmk0p2xbov5g::::res://tilesets/simple room.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn<>uid://d3crr33t53p7a::::res://objectsprites/door.png<>res://DoorArea.gd<>uid://by0gh12jkysoj::::res://icon.svg<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
 ::res://addons/::1712783671
 ::res://addons/dialogue_manager/::1712783675
 constants.gd::GDScript::-1::1712783673::0::1::::<>Node<>::
@@ -66,11 +68,11 @@ main_view.gd::GDScript::-1::1712783675::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1712783675::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
 settings_view.gd::GDScript::-1::1712783675::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1712783675::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://characters/::1712955848
-may.tscn::PackedScene::3091742078205851019::1712955848::0::1::::<><>::res://scripts/CharacterMovement.gd<>uid://wbk4vfb2qsgk::::res://maysprite/walk_forward/fwalk1.png<>uid://chodoepj0dxyf::::res://maysprite/walk_forward/fwalk2.png<>uid://dxkgjj2ddn487::::res://maysprite/walk_forward/fwalk3.png<>uid://bxgmae1o3yxgp::::res://maysprite/walk_forward/fwalk4.png<>uid://2pbh2vjnmy18::::res://maysprite/walk_left/lwalk1.png<>uid://c4cej6xvbasfh::::res://maysprite/walk_left/lwalk2.png<>uid://cc323ai5bvc3::::res://maysprite/walk_left/lwalk4.png<>uid://buqesnbj7esrj::::res://maysprite/maysprite-7.png.png<>uid://p3o10j8eb6wd::::res://maysprite/maysprite-6.png.png<>uid://b78wtjkki7okx::::res://maysprite/maysprite-8.png.png<>uid://bi1thapl5r4kk::::res://maysprite/walk_backward/bwalk1.png<>uid://cuels6vfaiou7::::res://maysprite/walk_backward/bwalk2.png<>uid://c5pb2mrwkbot0::::res://maysprite/walk_backward/bwalk3.png<>uid://cx27iylttqksh::::res://maysprite/walk_backward/bwalk4.png
-::res://dialogues/::1713038424
+::res://characters/::1713044528
+may.tscn::PackedScene::3091742078205851019::1713044528::0::1::::<><>::res://scripts/CharacterMovement.gd<>uid://wbk4vfb2qsgk::::res://maysprite/walk_forward/fwalk1.png<>uid://chodoepj0dxyf::::res://maysprite/walk_forward/fwalk2.png<>uid://dxkgjj2ddn487::::res://maysprite/walk_forward/fwalk3.png<>uid://bxgmae1o3yxgp::::res://maysprite/walk_forward/fwalk4.png<>uid://2pbh2vjnmy18::::res://maysprite/walk_left/lwalk1.png<>uid://c4cej6xvbasfh::::res://maysprite/walk_left/lwalk2.png<>uid://cc323ai5bvc3::::res://maysprite/walk_left/lwalk4.png<>uid://buqesnbj7esrj::::res://maysprite/maysprite-7.png.png<>uid://p3o10j8eb6wd::::res://maysprite/maysprite-6.png.png<>uid://b78wtjkki7okx::::res://maysprite/maysprite-8.png.png<>uid://bi1thapl5r4kk::::res://maysprite/walk_backward/bwalk1.png<>uid://cuels6vfaiou7::::res://maysprite/walk_backward/bwalk2.png<>uid://c5pb2mrwkbot0::::res://maysprite/walk_backward/bwalk3.png<>uid://cx27iylttqksh::::res://maysprite/walk_backward/bwalk4.png<>res://scripts/Direction.gd
+::res://dialogues/::1713044528
 balloon.gd::GDScript::-1::1713038711::0::1::::<>CanvasLayer<>::
-balloon.tscn::PackedScene::2304415056852043862::1713038424::0::1::::<><>::res://dialogues/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
+balloon.tscn::PackedScene::2304415056852043862::1713044528::0::1::::<><>::res://dialogues/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
 main.dialogue::Resource::2023342284941097175::1713038856::1713038857::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://helpers/::1712956924
 actionable.gd::GDScript::-1::1712784773::0::1::::<>Area2D<>::
@@ -103,20 +105,21 @@ lwalk1.png::CompressedTexture2D::1926139113086009861::1711393522::1711472149::1:
 lwalk2.png::CompressedTexture2D::6812707193223327977::1711393520::1711472149::1::::<><>::
 lwalk3.png::CompressedTexture2D::87562376595700629::1711393522::1711472149::1::::<><>::
 lwalk4.png::CompressedTexture2D::146256206074518684::1711393522::1711472149::1::::<><>::
-::res://scripts/::1713038410
+::res://objectsprites/::1713041771
+door.png::CompressedTexture2D::9129742490638552348::1713041139::1713041771::1::::<><>::
+::res://scripts/::1713039484
 AnimatedSprite2D.gd::GDScript::-1::1711489399::0::1::::<>AnimatedSprite2D<>::
-CharacterMovement.gd::GDScript::-1::1713038753::0::1::::<>CharacterBody2D<>::
+CharacterMovement.gd::GDScript::-1::1713039484::0::1::::<>CharacterBody2D<>::
 constants.gd::GDScript::-1::1711488930::0::1::::<>Node<>::
 Direction.gd::GDScript::-1::1712786486::0::1::::<>Marker2D<>::
-state.gd::GDScript::-1::1713038753::0::1::::<>Node<>::
-::res://tilesets/::1712782511
+state.gd::GDScript::-1::1713039424::0::1::::<>Node<>::
+::res://tilesets/::1713042579
 decor_8x8.png::CompressedTexture2D::2193718565968626244::1708117661::1711473678::1::::<><>::
 decor_16x16.png::CompressedTexture2D::5309778248082233939::1708117661::1711473678::1::::<><>::
 fences.png::CompressedTexture2D::1850486929672681013::1708117661::1711473678::1::::<><>::
 grass.png::CompressedTexture2D::7008906507390898446::1708117661::1711473678::1::::<><>::
-New Piskel (1).png::CompressedTexture2D::1569579738467614838::1712782511::1712782511::1::::<><>::
 plains.png::CompressedTexture2D::1380760023870053420::1708117661::1711473678::1::::<><>::
-simple room.png::CompressedTexture2D::3262958817432412890::1712782011::1712782056::1::::<><>::
+simple room.png::CompressedTexture2D::1569579738467614838::1712782511::1713042579::1::::<><>::
 Terrain (32x32).png::CompressedTexture2D::4690853623450382056::1707787264::1711473678::1::::<><>::
 Terrains_Dirt_Grass_Sand_Cliffs.png::CompressedTexture2D::6058601818246937775::1708117132::1711473678::1::::<><>::
 water1.png::CompressedTexture2D::5512942157957936969::1708117661::1711473678::1::::<><>::

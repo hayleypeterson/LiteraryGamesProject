@@ -1,31 +1,14 @@
-[gd_scene load_steps=30 format=3 uid="uid://cfi0a6ucb22ef"]
+[gd_scene load_steps=13 format=3 uid="uid://cfi0a6ucb22ef"]
 
-[ext_resource type="Texture2D" uid="uid://wbk4vfb2qsgk" path="res://maysprite/walk_forward/fwalk1.png" id="1_mptn4"]
-[ext_resource type="Texture2D" uid="uid://bmqupp8jmh6lq" path="res://tilesets/simple room.png" id="1_rtvgn"]
-[ext_resource type="Texture2D" uid="uid://chodoepj0dxyf" path="res://maysprite/walk_forward/fwalk2.png" id="2_0iat5"]
-[ext_resource type="Texture2D" uid="uid://wmk0p2xbov5g" path="res://tilesets/New Piskel (1).png" id="2_368ba"]
-[ext_resource type="Texture2D" uid="uid://dxkgjj2ddn487" path="res://maysprite/walk_forward/fwalk3.png" id="3_8te7q"]
-[ext_resource type="Texture2D" uid="uid://bxgmae1o3yxgp" path="res://maysprite/walk_forward/fwalk4.png" id="4_neie8"]
-[ext_resource type="Script" path="res://scripts/CharacterMovement.gd" id="5_rmnmo"]
-[ext_resource type="Texture2D" uid="uid://2pbh2vjnmy18" path="res://maysprite/walk_left/lwalk1.png" id="6_04iou"]
-[ext_resource type="Texture2D" uid="uid://bi1thapl5r4kk" path="res://maysprite/walk_backward/bwalk1.png" id="6_ns0a0"]
-[ext_resource type="Texture2D" uid="uid://c4cej6xvbasfh" path="res://maysprite/walk_left/lwalk2.png" id="7_ovae5"]
-[ext_resource type="Texture2D" uid="uid://cuels6vfaiou7" path="res://maysprite/walk_backward/bwalk2.png" id="7_sj0jr"]
-[ext_resource type="Texture2D" uid="uid://cc323ai5bvc3" path="res://maysprite/walk_left/lwalk4.png" id="8_27k8d"]
-[ext_resource type="Texture2D" uid="uid://c5pb2mrwkbot0" path="res://maysprite/walk_backward/bwalk3.png" id="8_n1tj7"]
-[ext_resource type="Texture2D" uid="uid://buqesnbj7esrj" path="res://maysprite/maysprite-7.png.png" id="9_dbjqb"]
-[ext_resource type="Texture2D" uid="uid://cx27iylttqksh" path="res://maysprite/walk_backward/bwalk4.png" id="9_fawh2"]
-[ext_resource type="Texture2D" uid="uid://p3o10j8eb6wd" path="res://maysprite/maysprite-6.png.png" id="10_ld7a5"]
-[ext_resource type="Texture2D" uid="uid://b78wtjkki7okx" path="res://maysprite/maysprite-8.png.png" id="11_r142e"]
+[ext_resource type="Texture2D" uid="uid://wmk0p2xbov5g" path="res://tilesets/simple room.png" id="2_368ba"]
+[ext_resource type="PackedScene" uid="uid://bkbwsmuxtnisp" path="res://characters/may.tscn" id="3_q74hk"]
+[ext_resource type="Texture2D" uid="uid://d3crr33t53p7a" path="res://objectsprites/door.png" id="7_njeg1"]
+[ext_resource type="Script" path="res://DoorArea.gd" id="8_qpdsl"]
 [ext_resource type="Texture2D" uid="uid://by0gh12jkysoj" path="res://icon.svg" id="18_7bdkp"]
-[ext_resource type="Script" path="res://scripts/Direction.gd" id="18_luf37"]
 [ext_resource type="PackedScene" uid="uid://cms2ynyg6r3f6" path="res://helpers/actionable.tscn" id="19_1xavs"]
 [ext_resource type="Resource" uid="uid://33effrdfnbo6" path="res://dialogues/main.dialogue" id="20_nggfk"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xty87"]
-texture = ExtResource("1_rtvgn")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elge7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4e2k2"]
 texture = ExtResource("2_368ba")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -91,135 +74,29 @@ texture = ExtResource("2_368ba")
 [sub_resource type="TileSet" id="TileSet_brbcp"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
-sources/3 = SubResource("TileSetAtlasSource_xty87")
-sources/4 = SubResource("TileSetAtlasSource_elge7")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ct1wm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_mptn4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_0iat5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_8te7q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_neie8")
-}],
-"loop": true,
-"name": &"walk_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_04iou")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_ovae5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_04iou")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_27k8d")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_dbjqb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_ld7a5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_dbjqb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_r142e")
-}],
-"loop": true,
-"name": &"walk_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_ns0a0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_sj0jr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_n1tj7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_fawh2")
-}],
-"loop": true,
-"name": &"walk_up",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u67v"]
-size = Vector2(15, 14)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_lpavh"]
-radius = 8.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri2sx"]
-size = Vector2(11, 10)
+sources/1 = SubResource("TileSetAtlasSource_4e2k2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dvo1j"]
 size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri2sx"]
+size = Vector2(15.5, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4wsk"]
+size = Vector2(18, 20)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_brbcp")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114144, 589824, 6, 1179680, 589824, 6, 1179681, 589824, 2, 1245217, 589824, 6, 1245218, 589824, 2, 1245219, 589824, 6, 1179683, 589824, 2, 1114147, 589824, 6, 1114146, 589824, 6, 1114145, 589824, 6, 1179682, 589824, 6, 1245216, 589824, 6, 1310752, 589824, 6, 1310753, 589824, 2, 1310754, 589824, 6, 1310755, 589824, 2, 1310756, 589824, 6, 1245220, 589824, 2, 1179684, 589824, 6, 1114148, 589824, 6, 1114149, 589824, 6, 1179685, 589824, 6, 1245221, 589824, 6, 1310757, 589824, 6, 0, 196612, 1, 131072, 196612, 1, 65537, 196612, 1, 131074, 196612, 1, 2, 196612, 1, 65536, 196612, 1, 131073, 196612, 1, 65538, 196612, 1, 1, 196612, 1, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 131075, 4, 0, 65539, 4, 0, 3, 4, 0, 262143, 4, 0, 196607, 196612, 1, 131071, 196612, 1, 65535, 196612, 1, -1, 196612, 1, -65537, 196612, 1, -131072, 196612, 1, -131069, 4, 0, -65533, 4, 0, -65538, 196612, 1, -65539, 4, 0, -3, 4, 0, 65533, 4, 0, 131069, 4, 0, 196605, 4, 0, 262141, 4, 0, 262142, 4, 0, 196606, 196612, 1, 131070, 196612, 1, 65534, 196612, 1, -2, 196612, 1, -131075, 4, 0, -131074, 4, 0, -131073, 4, 0, -196608, 4, 0, -196607, 4, 0, -196606, 4, 0, -196605, 4, 0, -196611, 131076, 3, -196610, 131076, 3, -196609, 131076, 3, -262144, 131076, 3, -262143, 131076, 3, -262142, 131076, 3, -262141, 131076, 3, -262140, 65540, 2, -196604, 65540, 3, -131068, 65540, 3, -65532, 65540, 3, 4, 65540, 3, 5, 4, 2, 65541, 4, 2, 65540, 65540, 3, 131076, 65540, 3, 196612, 65540, 3, 327676, 196612, 2, -196612, 131076, 2, 262148, 4, 3, -131076, 4, 4, -65540, 4, 4, -4, 4, 4, 65532, 4, 4, 131068, 4, 4, 196604, 4, 4, 262140, 4, 4, 327677, 196612, 3, 327678, 196612, 3, 327679, 196612, 3, 262144, 196612, 3, 262145, 196612, 3, 262146, 196612, 3, 262147, 196612, 3, 131077, 4, 2, 196613, 4, 2, 262149, 4, 2, 327685, 4, 2, 393221, 4, 2, 393220, 4, 2, 393219, 4, 2, 393212, 4, 2, 393213, 4, 2, 393214, 4, 2, 393215, 4, 2, 327680, 4, 2, 327681, 4, 2, 327682, 4, 2, 327683, 4, 2, 327684, 4, 2, 393218, 4, 2, 393217, 4, 2, 393216, 4, 2, 458751, 4, 2, 458750, 4, 2, 458749, 4, 2, 458748, 4, 2, 458747, 4, 2, -65531, 4, 2, -131067, 4, 2, -196603, 4, 2, -262139, 4, 2, -262149, 4, 2, -262148, 4, 2, -262147, 4, 2, -262146, 4, 2, -262145, 4, 2, -327680, 4, 2, -327679, 4, 2, -327678, 4, 2, -327677, 4, 2, -327676, 4, 2, -327675, 4, 2, -196613, 4, 2, -131077, 4, 2, -65541, 4, 2, -5, 4, 2, 65531, 4, 2, 131067, 4, 2, 196603, 4, 2, 262139, 4, 2, 327675, 4, 2, 393211, 4, 2, -65536, 196612, 1, -65535, 196612, 1, -131071, 196612, 1, -131070, 196612, 1, -65534, 196612, 1)
+layer_0/tile_data = PackedInt32Array(-196611, 131073, 3, -196610, 131073, 3, -196609, 131073, 3, -262144, 131073, 3, -262143, 131073, 3, -262142, 131073, 3, -262141, 131073, 3, -262140, 65537, 2, -196604, 65537, 3, -131068, 65537, 3, -65532, 65537, 3, 4, 65537, 3, 5, 1, 2, 65541, 1, 2, 65540, 65537, 3, 131076, 65537, 3, 196612, 65537, 3, 327676, 196609, 3, -196612, 131073, 3, 262148, 1, 3, 327677, 196609, 3, 327678, 196609, 3, 327679, 196609, 3, 262144, 196609, 3, 262145, 196609, 3, 262146, 196609, 3, 262147, 196609, 3, 131077, 1, 2, 196613, 1, 2, 262149, 1, 2, 327685, 1, 2, 393221, 1, 2, 393220, 1, 2, 393219, 1, 2, 393212, 1, 2, 393213, 1, 2, 393214, 1, 2, 393215, 1, 2, 327680, 1, 2, 327681, 1, 2, 327682, 1, 2, 327683, 1, 2, 327684, 1, 2, 393218, 1, 2, 393217, 1, 2, 393216, 1, 2, 458751, 1, 2, 458750, 1, 2, 458749, 1, 2, 458748, 1, 2, 458747, 1, 2, -65531, 1, 2, -131067, 1, 2, -196603, 1, 2, -262139, 1, 2, -262149, 1, 2, -262148, 1, 2, -262147, 1, 2, -262146, 1, 2, -262145, 1, 2, -327680, 1, 2, -327679, 1, 2, -327678, 1, 2, -327677, 1, 2, -327676, 1, 2, -327675, 1, 2, -196613, 131073, 2, -131077, 1, 4, -65541, 1, 4, -5, 1, 4, 65531, 1, 4, 131067, 1, 4, 196603, 1, 4, 262139, 1, 4, 327675, 196609, 2, 393211, 1, 2, 131072, 1, 0, 65536, 1, 0, 0, 1, 0, -65536, 1, 0, -131072, 1, 0, -196608, 1, 0, -131073, 1, 0, -131074, 1, 0, -131075, 1, 0, -131076, 1, 0, -65540, 1, 0, -4, 1, 0, 65532, 1, 0, 131068, 1, 0, 196604, 1, 0, 262140, 1, 0, 262141, 1, 0, 196605, 1, 0, 131069, 1, 0, 65533, 1, 0, -3, 1, 0, -65539, 1, 0, -65538, 1, 0, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, 196606, 1, 0, 262142, 1, 0, 262143, 1, 0, 196607, 1, 0, 131071, 1, 0, 65535, 1, 0, -1, 1, 0, -65537, 1, 0, 196608, 1, 0, 196609, 1, 0, 131073, 1, 0, 65537, 1, 0, 1, 1, 0, -65535, 1, 0, -131071, 1, 0, -196607, 1, 0, -196606, 1, 0, -131070, 1, 0, -65534, 1, 0, 2, 1, 0, 65538, 1, 0, 131074, 1, 0, 196610, 1, 0, 196611, 1, 0, 131075, 1, 0, 65539, 1, 0, 3, 1, 0, -65533, 1, 0, -131069, 1, 0, -196605, 1, 0)
 
-[node name="May" type="CharacterBody2D" parent="."]
-motion_mode = 1
-script = ExtResource("5_rmnmo")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="May"]
-position = Vector2(8, 6)
-scale = Vector2(0.182813, 0.175)
-sprite_frames = SubResource("SpriteFrames_ct1wm")
-animation = &"walk_down"
-
-[node name="Camera2D" type="Camera2D" parent="May"]
-visible = false
-zoom = Vector2(8, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="May"]
-position = Vector2(7.5, 8)
-shape = SubResource("RectangleShape2D_3u67v")
-
-[node name="Direction" type="Marker2D" parent="May"]
-position = Vector2(8, 8)
-script = ExtResource("18_luf37")
-
-[node name="ActionableFinder" type="Area2D" parent="May/Direction"]
-collision_layer = 0
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="May/Direction/ActionableFinder"]
-position = Vector2(0, 6)
-shape = SubResource("CircleShape2D_lpavh")
+[node name="May" parent="." instance=ExtResource("3_q74hk")]
+z_index = 5
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-30, 14)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ri2sx")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(-2.38419e-07, 1.49012e-07)
@@ -231,3 +108,25 @@ dialogue_resource = ExtResource("20_nggfk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Actionable"]
 shape = SubResource("RectangleShape2D_dvo1j")
+
+[node name="DoortoHall" type="StaticBody2D" parent="."]
+position = Vector2(0, -43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoortoHall"]
+position = Vector2(0.25, -16)
+shape = SubResource("RectangleShape2D_ri2sx")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoortoHall"]
+position = Vector2(0, -15.75)
+scale = Vector2(0.0625, 0.0703125)
+texture = ExtResource("7_njeg1")
+
+[node name="Area2D" type="Area2D" parent="DoortoHall"]
+script = ExtResource("8_qpdsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoortoHall/Area2D"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_r4wsk")
+
+[connection signal="body_entered" from="DoortoHall/Area2D" to="DoortoHall/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DoortoHall/Area2D" to="DoortoHall/Area2D" method="_on_body_exited"]
