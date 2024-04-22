@@ -1,5 +1,5 @@
 extends Area2D
-
+@export var scenechange: String = ""
 var entered = false
 
 
@@ -15,4 +15,4 @@ func _on_body_exited(body: CharacterBody2D):
 func _process(delta):
 	if (entered):
 		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene_to_file("res://hallway.tscn")
+			get_tree().change_scene_to_file(scenechange)

@@ -89,27 +89,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u67v"]
-size = Vector2(15, 14)
+size = Vector2(14.5, 10.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lpavh"]
-radius = 8.0
+radius = 7.0
 
 [node name="May" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_n1g4a")
+movement_speed = 70.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, 6)
-scale = Vector2(0.182813, 0.175)
+position = Vector2(7.68748, 5)
+scale = Vector2(0.191406, 0.1875)
 sprite_frames = SubResource("SpriteFrames_ct1wm")
 animation = &"walk_down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
-zoom = Vector2(8, 8)
+zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.5, 8)
+position = Vector2(7.25, 9.25)
 shape = SubResource("RectangleShape2D_3u67v")
 
 [node name="Direction" type="Marker2D" parent="."]
@@ -121,5 +122,5 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
-position = Vector2(0, 6)
+position = Vector2(-1, 5)
 shape = SubResource("CircleShape2D_lpavh")

@@ -1,97 +1,74 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3idq8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_n5lp8"]
 
 [resource]
-script = ExtResource("1_3idq8")
+script = ExtResource("1_n5lp8")
 using_states = PackedStringArray()
 titles = {
-"end_dialogue": "20",
-"start": "3"
+"aprils_art": "14",
+"aprils_bed": "53",
+"aprils_desk": "19",
+"diary": "34",
+"end_dialogue": "67",
+"looking_in_desk": "27",
+"may_bed": "2",
+"mays_desk": "57",
+"paper": "44"
 }
 character_names = PackedStringArray("May")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
-"text": "start",
+"next_id": "2",
+"text": "may_bed",
 "type": &"title"
-},
-"10": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "10",
-"next_id": "11",
-"notes": "",
-"parent_id": "9",
-"tags": PackedStringArray(),
-"text": "I guess I should make it, at least.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "I guess I should make it, at least.",
-"type": &"dialogue"
-},
-"11": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "11",
-"next_id": "12",
-"notes": "",
-"parent_id": "9",
-"tags": PackedStringArray(),
-"text": "There. That's better.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "There. That's better.",
-"type": &"dialogue"
 },
 "12": {
 "id": "12",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "saw_bed"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "string",
-"value": "made"
-}]),
-"is_blocking": true
-},
-"next_id": "13",
-"parent_id": "9",
-"type": &"mutation"
-},
-"13": {
-"id": "13",
-"is_snippet": false,
-"next_id": "20",
-"parent_id": "9",
-"type": &"goto"
+"next_id": "14",
+"text": "aprils_art",
+"type": &"title"
 },
 "14": {
-"character": "",
+"character": "May",
 "character_replacements": Array[Dictionary]([]),
 "id": "14",
 "next_id": "15",
-"next_id_after": "15",
 "notes": "",
-"parent_id": "7",
 "tags": PackedStringArray(),
-"text": "Leave it",
+"text": "April's artwork! She's so talented.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Leave it",
-"type": &"response"
+"translation_key": "April's artwork! She's so talented.",
+"type": &"dialogue"
 },
 "15": {
 "id": "15",
-"mutation": {
+"is_snippet": false,
+"next_id": "67",
+"type": &"goto"
+},
+"18": {
+"id": "18",
+"next_id": "19",
+"text": "aprils_desk",
+"type": &"title"
+},
+"19": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.",
+"type": &"dialogue"
+},
+"2": {
+"condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
 "value": "State"
@@ -100,6 +77,262 @@ lines = {
 }, {
 "type": "variable",
 "value": "saw_bed"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "seen"
+}, {
+"type": "colon"
+}])
+},
+"id": "2",
+"next_conditional_id": "4",
+"next_id": "3",
+"next_id_after": "9",
+"type": &"condition"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"next_id_after": "27",
+"notes": "",
+"responses": PackedStringArray("20", "23"),
+"tags": PackedStringArray(),
+"text": "Snoop",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Snoop",
+"type": &"response"
+},
+"21": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"parent_id": "20",
+"tags": PackedStringArray(),
+"text": "You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.",
+"type": &"dialogue"
+},
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "27",
+"parent_id": "20",
+"type": &"goto"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"next_id_after": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "67",
+"parent_id": "23",
+"type": &"goto"
+},
+"26": {
+"id": "26",
+"next_id": "27",
+"text": "looking_in_desk",
+"type": &"title"
+},
+"27": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Keep looking through April's desk?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Keep looking through April's desk?",
+"type": &"dialogue"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "34",
+"next_id_after": "31",
+"notes": "",
+"responses": PackedStringArray("28", "29", "30"),
+"tags": PackedStringArray(),
+"text": "Diary",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Diary",
+"type": &"response"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "44",
+"next_id_after": "31",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Paper",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Paper",
+"type": &"response"
+},
+"3": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "9",
+"notes": "",
+"parent_id": "2",
+"tags": PackedStringArray(),
+"text": "Just my bed. Looks the same as before.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Just my bed. Looks the same as before.",
+"type": &"dialogue"
+},
+"30": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "67",
+"next_id_after": "31",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Stop looking",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stop looking",
+"type": &"response"
+},
+"31": {
+"id": "31",
+"is_snippet": false,
+"next_id": "67",
+"type": &"goto"
+},
+"33": {
+"id": "33",
+"next_id": "34",
+"text": "diary",
+"type": &"title"
+},
+"34": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_diary"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "seen"
+}, {
+"type": "colon"
+}])
+},
+"id": "34",
+"next_conditional_id": "36",
+"next_id": "35",
+"next_id_after": "41",
+"type": &"condition"
+},
+"35": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "41",
+"notes": "",
+"parent_id": "34",
+"tags": PackedStringArray(),
+"text": "I better not look through any more of this.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I better not look through any more of this.",
+"type": &"dialogue"
+},
+"36": {
+"id": "36",
+"next_conditional_id": "41",
+"next_id": "37",
+"next_id_after": "41",
+"type": &"condition"
+},
+"37": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "37",
+"next_id": "38",
+"notes": "",
+"parent_id": "36",
+"tags": PackedStringArray(),
+"text": "Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting.",
+"type": &"dialogue"
+},
+"38": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "38",
+"next_id": "39",
+"notes": "",
+"parent_id": "36",
+"tags": PackedStringArray(),
+"text": "\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\"",
+"type": &"dialogue"
+},
+"39": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "39",
+"next_id": "40",
+"notes": "",
+"parent_id": "36",
+"tags": PackedStringArray(),
+"text": "What does that even mean? Where is she?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What does that even mean? Where is she?",
+"type": &"dialogue"
+},
+"4": {
+"id": "4",
+"next_conditional_id": "9",
+"next_id": "5",
+"next_id_after": "9",
+"type": &"condition"
+},
+"40": {
+"id": "40",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_diary"
 }, {
 "type": "assignment",
 "value": "="
@@ -109,24 +342,254 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "17",
-"parent_id": "7",
+"next_id": "41",
+"parent_id": "36",
 "type": &"mutation"
 },
-"17": {
-"id": "17",
+"41": {
+"id": "41",
 "is_snippet": false,
-"next_id": "20",
+"next_id": "27",
 "type": &"goto"
 },
-"19": {
-"id": "19",
-"next_id": "20",
+"43": {
+"id": "43",
+"next_id": "44",
+"text": "paper",
+"type": &"title"
+},
+"44": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_paper"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "seen"
+}, {
+"type": "colon"
+}])
+},
+"id": "44",
+"next_conditional_id": "46",
+"next_id": "45",
+"next_id_after": "50",
+"type": &"condition"
+},
+"45": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "50",
+"notes": "",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "Could this actually be from Mom?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Could this actually be from Mom?",
+"type": &"dialogue"
+},
+"46": {
+"id": "46",
+"next_conditional_id": "50",
+"next_id": "47",
+"next_id_after": "50",
+"type": &"condition"
+},
+"47": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": "48",
+"notes": "",
+"parent_id": "46",
+"tags": PackedStringArray(),
+"text": "You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read.",
+"type": &"dialogue"
+},
+"48": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "48",
+"next_id": "49",
+"notes": "",
+"parent_id": "46",
+"tags": PackedStringArray(),
+"text": "At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.",
+"type": &"dialogue"
+},
+"49": {
+"id": "49",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_paper"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "seen"
+}]),
+"is_blocking": true
+},
+"next_id": "50",
+"parent_id": "46",
+"type": &"mutation"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Your bed is a mess of stuffed animals and blankets. Still the same bedspread you got when April outgrew it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your bed is a mess of stuffed animals and blankets. Still the same bedspread you got when April outgrew it.",
+"type": &"dialogue"
+},
+"50": {
+"id": "50",
+"is_snippet": false,
+"next_id": "27",
+"type": &"goto"
+},
+"52": {
+"id": "52",
+"next_id": "53",
+"text": "aprils_bed",
+"type": &"title"
+},
+"53": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "53",
+"next_id": "54",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "April's bed is made, which is weird, considering that it's the middle of the night.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "April's bed is made, which is weird, considering that it's the middle of the night.",
+"type": &"dialogue"
+},
+"54": {
+"id": "54",
+"is_snippet": false,
+"next_id": "67",
+"type": &"goto"
+},
+"56": {
+"id": "56",
+"next_id": "57",
+"text": "mays_desk",
+"type": &"title"
+},
+"57": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "57",
+"next_id": "58",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.",
+"type": &"dialogue"
+},
+"58": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "58",
+"next_id": "59",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "There are still loose scraps of paper everywhere.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There are still loose scraps of paper everywhere.",
+"type": &"dialogue"
+},
+"59": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "60",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'll clean this up.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'll clean this up.",
+"type": &"dialogue"
+},
+"6": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "So unfair that I never get anything new.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So unfair that I never get anything new.",
+"type": &"dialogue"
+},
+"60": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "60",
+"next_id": "61",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"dialogue"
+},
+"61": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "61",
+"next_id": "63",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Later.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Later.",
+"type": &"dialogue"
+},
+"63": {
+"id": "63",
+"is_snippet": false,
+"next_id": "67",
+"type": &"goto"
+},
+"66": {
+"id": "66",
+"next_id": "67",
 "text": "end_dialogue",
 "type": &"title"
 },
-"20": {
-"id": "20",
+"67": {
+"id": "67",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -145,17 +608,18 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "21",
+"next_id": "68",
 "type": &"mutation"
 },
-"21": {
-"id": "21",
+"68": {
+"id": "68",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 },
-"3": {
-"condition": {
+"7": {
+"id": "7",
+"mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
 "value": "State"
@@ -165,126 +629,89 @@ lines = {
 "type": "variable",
 "value": "saw_bed"
 }, {
-"type": "comparison",
-"value": "=="
+"type": "assignment",
+"value": "="
 }, {
 "type": "string",
 "value": "seen"
-}, {
-"type": "colon"
-}])
+}]),
+"is_blocking": true
 },
-"id": "3",
-"next_conditional_id": "5",
-"next_id": "4",
-"next_id_after": "17",
-"type": &"condition"
-},
-"4": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "4",
-"next_id": "17",
-"notes": "",
-"parent_id": "3",
-"tags": PackedStringArray(),
-"text": "Just my bed. Looks the same as before.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Just my bed. Looks the same as before.",
-"type": &"dialogue"
-},
-"5": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "saw_bed"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "string",
-"value": "made"
-}, {
-"type": "colon"
-}])
-},
-"id": "5",
-"next_conditional_id": "7",
-"next_id": "6",
-"next_id_after": "17",
-"type": &"condition"
-},
-"6": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "6",
-"next_id": "17",
-"notes": "",
-"parent_id": "5",
-"tags": PackedStringArray(),
-"text": "Just my bed. Looks a little better now that it's made!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Just my bed. Looks a little better now that it's made!",
-"type": &"dialogue"
-},
-"7": {
-"id": "7",
-"next_conditional_id": "17",
-"next_id": "8",
-"next_id_after": "17",
-"type": &"condition"
-},
-"8": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "8",
 "next_id": "9",
-"notes": "",
-"parent_id": "7",
-"tags": PackedStringArray(),
-"text": "This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.",
-"type": &"dialogue"
+"parent_id": "4",
+"type": &"mutation"
 },
 "9": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
 "id": "9",
-"next_id": "10",
-"next_id_after": "15",
-"notes": "",
-"parent_id": "7",
-"responses": PackedStringArray("9", "14"),
-"tags": PackedStringArray(),
-"text": "Make bed",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Make bed",
-"type": &"response"
+"is_snippet": false,
+"next_id": "67",
+"type": &"goto"
 }
 }
-raw_text = "~ start
-
+raw_text = "~ may_bed
 if State.saw_bed == \"seen\":
 	May: Just my bed. Looks the same as before.
-elif State.saw_bed == \"made\":
-	May: Just my bed. Looks a little better now that it's made!
 else: 
-	May: This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.
-	- Make bed
-		May: I guess I should make it, at least.
-		May: There. That's better.
-		set State.saw_bed = \"made\"
-		=> end_dialogue
-	- Leave it
+	Your bed is a mess of stuffed animals and blankets. Still the same bedspread you got when April outgrew it.
+	May: So unfair that I never get anything new.
 	set State.saw_bed = \"seen\"
 
 => end_dialogue
+
+
+~ aprils_art
+
+May: April's artwork! She's so talented. 
+=> end_dialogue
+
+
+~ aprils_desk
+April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.
+- Snoop
+		You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.  
+		=> looking_in_desk
+- Leave
+		=> end_dialogue
+
+~ looking_in_desk 
+Keep looking through April's desk?
+- Diary => diary 
+- Paper => paper
+- Stop looking => end_dialogue
+=> end_dialogue
+
+~ diary
+if State.saw_diary == \"seen\":
+	May: I better not look through any more of this.
+else:
+	Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting. 
+	\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\" 
+	What does that even mean? Where is she? 
+	set State.saw_diary = \"seen\"
+=> looking_in_desk
+
+~ paper
+if State.saw_paper == \"seen\":
+	May: Could this actually be from Mom?
+else:
+	You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read. 
+	At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.
+	set State.saw_paper = \"seen\"
+=> looking_in_desk
+
+~ aprils_bed
+April's bed is made, which is weird, considering that it's the middle of the night.
+=> end_dialogue
+
+~ mays_desk
+Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.
+There are still loose scraps of paper everywhere.
+May: I'll clean this up.
+May: ...
+May: Later.
+
+=> end_dialogue
+
 
 ~ end_dialogue
 set State.frozen = false

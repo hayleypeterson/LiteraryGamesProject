@@ -1,20 +1,67 @@
-~ start
-
+~ may_bed
 if State.saw_bed == "seen":
 	May: Just my bed. Looks the same as before.
-elif State.saw_bed == "made":
-	May: Just my bed. Looks a little better now that it's made!
 else: 
-	May: This is my bed. Same green bedspread that I got as a hand me down from April. No fair that she gets all the new stuff.
-	- Make bed
-		May: I guess I should make it, at least.
-		May: There. That's better.
-		set State.saw_bed = "made"
-		=> end_dialogue
-	- Leave it
+	Your bed is a mess of stuffed animals and blankets. Still the same bedspread you got when April outgrew it.
+	May: So unfair that I never get anything new.
 	set State.saw_bed = "seen"
 
 => end_dialogue
+
+
+~ aprils_art
+
+May: April's artwork! She's so talented. 
+=> end_dialogue
+
+
+~ aprils_desk
+April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.
+- Snoop
+		You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.  
+		=> looking_in_desk
+- Leave
+		=> end_dialogue
+
+~ looking_in_desk 
+Keep looking through April's desk?
+- Diary => diary 
+- Paper => paper
+- Stop looking => end_dialogue
+=> end_dialogue
+
+~ diary
+if State.saw_diary == "seen":
+	May: I better not look through any more of this.
+else:
+	Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting. 
+	"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon." 
+	What does that even mean? Where is she? 
+	set State.saw_diary = "seen"
+=> looking_in_desk
+
+~ paper
+if State.saw_paper == "seen":
+	May: Could this actually be from Mom?
+else:
+	You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read. 
+	At the bottom though, you can unmistakeably see the word "Mom". Is this an old letter? You can't tell.
+	set State.saw_paper = "seen"
+=> looking_in_desk
+
+~ aprils_bed
+April's bed is made, which is weird, considering that it's the middle of the night.
+=> end_dialogue
+
+~ mays_desk
+Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.
+There are still loose scraps of paper everywhere.
+May: I'll clean this up.
+May: ...
+May: Later.
+
+=> end_dialogue
+
 
 ~ end_dialogue
 set State.frozen = false

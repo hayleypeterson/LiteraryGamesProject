@@ -1,3 +1,5 @@
 res://scene1.tscn
 res://hallway.tscn
 res://characters/may.tscn
+res://DoorArea.gd
+res://scripts/CharacterMovement.gd
