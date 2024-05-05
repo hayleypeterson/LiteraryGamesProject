@@ -26,7 +26,20 @@ func _process(_delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	#print("May switched scenes!")
+	#print("Current scene: " + State.current_scene)
+	#print("Last scene: " + State.last_scene)
+	
+	if (State.current_scene == "res://hallway.tscn"):
+		#default: May was in bedroom, no need to handle
+		
+		#May was in dad's room
+		if (State.last_scene == "res://dads_room.tscn"):
+			position += Vector2(63,0)
+			
+		if (State.last_scene == "res://bathroom.tscn"):
+			position += Vector2(-100,40)
+
 
 func get_input(delta):
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")

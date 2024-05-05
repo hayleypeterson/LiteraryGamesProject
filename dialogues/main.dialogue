@@ -16,9 +16,13 @@ May: April's artwork! She's so talented.
 
 
 ~ aprils_desk
+if State.snooped:
+	=> looking_in_desk
+
 April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.
 - Snoop
-		You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.  
+		You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that. 
+		set State.snooped = true 
 		=> looking_in_desk
 - Leave
 		=> end_dialogue
@@ -54,13 +58,78 @@ April's bed is made, which is weird, considering that it's the middle of the nig
 => end_dialogue
 
 ~ mays_desk
-Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.
-There are still loose scraps of paper everywhere.
+if (!State.saw_mays_desk):
+	Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.
+	There are still loose scraps of paper everywhere.
 May: I'll clean this up.
 May: ...
 May: Later.
+set State.saw_mays_desk = true
+=> end_dialogue
+
+~ stairs
+if State.stairs == "seen":
+	May: It's too dark down there...
+else:
+
+	May: Dad?
+	...
+	May: April?
+	No response. You're a little too scared to go downstairs in the dark.
+	set State.stairs = "seen"
+=> end_dialogue
+
+~ clock
+May: Way past my bedtime. But no one's here to get me in trouble.
 
 => end_dialogue
+
+~ bathroom
+if State.bathroom == 0:
+	May: Everything looks ordinary in here.
+elif State.bathroom == 1:
+	May: Nothing to see here.
+elif State.bathroom == 2:
+	May: I should look in one of the other rooms for more clues.
+else:
+	...
+	
+	
+set State.bathroom = State.bathroom + 1
+
+=> end_dialogue
+
+~ dads_bed
+May: Dad's bed.
+May: He doesn't sleep much though.
+=> end_dialogue
+
+~ closet
+
+set State.key_location = true
+if !(State.key_location):
+	May: It's just a bunch of Dad's clothes and random boxes of his old stuff.
+else:
+	Remembering the email from Mom, you duck into the back of the closet and see a small box. It doesn't look big enough to fit much though.
+	=> key_box
+=> end_dialogue
+
+~ key_box
+- Open it. 
+	set State.key = true
+	May: There's a key inside... 
+	=> end_dialogue
+- Leave it => end_dialogue
+=> end_dialogue
+
+
+~ study
+if State.study_locked:
+	May: Mom's old study...
+	May: It's locked, like always.
+
+=> end_dialogue
+
 
 
 ~ end_dialogue

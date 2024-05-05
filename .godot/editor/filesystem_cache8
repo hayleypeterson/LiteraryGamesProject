@@ -1,15 +1,18 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1713748379
+::res://::1714925355
 antique items sheet 1.2.png::CompressedTexture2D::1747520948448493104::1713720371::1713720396::1::::<><>::
 bluebed.png::CompressedTexture2D::6155243031026246462::1713728453::1713728477::1::::<><>::
-DoorArea.gd::GDScript::-1::1713042638::0::1::::<>Area2D<>::
+dads_room.tscn::PackedScene::4448610185437103989::1714925355::0::1::::<><>::uid://cao13weoqt6mu::::res://retro_interior/TopDownHouse_FloorsAndWalls.png<>uid://y5rodnte261i::::res://antique items sheet 1.2.png<>uid://d10qu7f7a4lii::::res://House_Tileset.png<>uid://o228d1c2xgib::::res://retro_interior/TopDownHouse_FurnitureState1.png<>uid://cj1lccu6q0rb5::::res://retro_interior/TopDownHouse_FurnitureState2.png<>uid://bchympecl4rdl::::res://retro_interior/TopDownHouse_SmallItems.png<>uid://cavsg3x3gapsw::::res://retro_interior/TopDownHouse_DoorsAndWindows.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn<>res://DoorArea.gd<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
+DoorArea.gd::GDScript::-1::1714922619::0::1::::<>Area2D<>::
 green bed.png::CompressedTexture2D::1283696565475251864::1713728447::1713728477::1::::<><>::
-hallway.tscn::PackedScene::620746771473783639::1713748379::0::1::::<><>::uid://csk3j0rmbyokt::::res://tilesets/Terrains_Dirt_Grass_Sand_Cliffs.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn
+hallway.tscn::PackedScene::620746771473783639::1714925354::0::1::::<><>::uid://csk3j0rmbyokt::::res://tilesets/Terrains_Dirt_Grass_Sand_Cliffs.png<>uid://cao13weoqt6mu::::res://retro_interior/TopDownHouse_FloorsAndWalls.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn<>uid://cavsg3x3gapsw::::res://retro_interior/TopDownHouse_DoorsAndWindows.png<>uid://o228d1c2xgib::::res://retro_interior/TopDownHouse_FurnitureState1.png<>res://DoorArea.gd<>uid://bchympecl4rdl::::res://retro_interior/TopDownHouse_SmallItems.png<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
 home_pack.png::CompressedTexture2D::9036461393105864506::1713727354::1713727344::1::::<><>::
 House_Tileset.png::CompressedTexture2D::9036790307208313964::1713720326::1713720396::1::::<><>::
 icon.svg::CompressedTexture2D::4122940585111375469::1711472027::1711472052::1::::<><>::
 README.md::TextFile::-1::1713731641::0::1::::<><>::
-scene1.tscn::PackedScene::5141820191641246369::1713748379::0::1::::<><>::uid://wmk0p2xbov5g::::res://tilesets/simple room.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn<>uid://o228d1c2xgib::::res://retro_interior/TopDownHouse_FurnitureState1.png<>uid://cao13weoqt6mu::::res://retro_interior/TopDownHouse_FloorsAndWalls.png<>uid://cj1lccu6q0rb5::::res://retro_interior/TopDownHouse_FurnitureState2.png<>uid://cavsg3x3gapsw::::res://retro_interior/TopDownHouse_DoorsAndWindows.png<>uid://bchympecl4rdl::::res://retro_interior/TopDownHouse_SmallItems.png<>uid://d3crr33t53p7a::::res://objectsprites/door.png<>res://DoorArea.gd<>uid://sj3ka5cyn481::::res://green bed.png<>uid://ctxv7oftfdemo::::res://bluebed.png<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
+bathroom.tscn::PackedScene::6026840295628812239::1714925355::0::1::::<><>::uid://cao13weoqt6mu::::res://retro_interior/TopDownHouse_FloorsAndWalls.png<>uid://cj1lccu6q0rb5::::res://retro_interior/TopDownHouse_FurnitureState2.png<>uid://bchympecl4rdl::::res://retro_interior/TopDownHouse_SmallItems.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn<>res://DoorArea.gd<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
+scene1.tscn::PackedScene::5141820191641246369::1714925354::0::1::::<><>::uid://wmk0p2xbov5g::::res://tilesets/simple room.png<>uid://bkbwsmuxtnisp::::res://characters/may.tscn<>uid://o228d1c2xgib::::res://retro_interior/TopDownHouse_FurnitureState1.png<>uid://cao13weoqt6mu::::res://retro_interior/TopDownHouse_FloorsAndWalls.png<>uid://cj1lccu6q0rb5::::res://retro_interior/TopDownHouse_FurnitureState2.png<>uid://cavsg3x3gapsw::::res://retro_interior/TopDownHouse_DoorsAndWindows.png<>uid://bchympecl4rdl::::res://retro_interior/TopDownHouse_SmallItems.png<>res://DoorArea.gd<>uid://sj3ka5cyn481::::res://green bed.png<>uid://ctxv7oftfdemo::::res://bluebed.png<>uid://cms2ynyg6r3f6::::res://helpers/actionable.tscn<>uid://33effrdfnbo6::::res://dialogues/main.dialogue
+TitleImage.PNG::CompressedTexture2D::266994460879102196::1713924227::1713926569::1::::<><>::
 ::res://addons/::1712783671
 ::res://addons/dialogue_manager/::1712783675
 constants.gd::GDScript::-1::1712783673::0::1::::<>Node<>::
@@ -73,12 +76,12 @@ main_view.gd::GDScript::-1::1712783675::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1712783675::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
 settings_view.gd::GDScript::-1::1712783675::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1712783675::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://characters/::1713748379
-may.tscn::PackedScene::3091742078205851019::1713748379::0::1::::<><>::res://scripts/CharacterMovement.gd<>uid://wbk4vfb2qsgk::::res://maysprite/walk_forward/fwalk1.png<>uid://chodoepj0dxyf::::res://maysprite/walk_forward/fwalk2.png<>uid://dxkgjj2ddn487::::res://maysprite/walk_forward/fwalk3.png<>uid://bxgmae1o3yxgp::::res://maysprite/walk_forward/fwalk4.png<>uid://2pbh2vjnmy18::::res://maysprite/walk_left/lwalk1.png<>uid://c4cej6xvbasfh::::res://maysprite/walk_left/lwalk2.png<>uid://cc323ai5bvc3::::res://maysprite/walk_left/lwalk4.png<>uid://buqesnbj7esrj::::res://maysprite/maysprite-7.png.png<>uid://p3o10j8eb6wd::::res://maysprite/maysprite-6.png.png<>uid://b78wtjkki7okx::::res://maysprite/maysprite-8.png.png<>uid://bi1thapl5r4kk::::res://maysprite/walk_backward/bwalk1.png<>uid://cuels6vfaiou7::::res://maysprite/walk_backward/bwalk2.png<>uid://c5pb2mrwkbot0::::res://maysprite/walk_backward/bwalk3.png<>uid://cx27iylttqksh::::res://maysprite/walk_backward/bwalk4.png<>res://scripts/Direction.gd
-::res://dialogues/::1713748375
+::res://characters/::1714925354
+may.tscn::PackedScene::3091742078205851019::1714925354::0::1::::<><>::res://scripts/CharacterMovement.gd<>uid://wbk4vfb2qsgk::::res://maysprite/walk_forward/fwalk1.png<>uid://chodoepj0dxyf::::res://maysprite/walk_forward/fwalk2.png<>uid://dxkgjj2ddn487::::res://maysprite/walk_forward/fwalk3.png<>uid://bxgmae1o3yxgp::::res://maysprite/walk_forward/fwalk4.png<>uid://2pbh2vjnmy18::::res://maysprite/walk_left/lwalk1.png<>uid://c4cej6xvbasfh::::res://maysprite/walk_left/lwalk2.png<>uid://cc323ai5bvc3::::res://maysprite/walk_left/lwalk4.png<>uid://buqesnbj7esrj::::res://maysprite/maysprite-7.png.png<>uid://p3o10j8eb6wd::::res://maysprite/maysprite-6.png.png<>uid://b78wtjkki7okx::::res://maysprite/maysprite-8.png.png<>uid://bi1thapl5r4kk::::res://maysprite/walk_backward/bwalk1.png<>uid://cuels6vfaiou7::::res://maysprite/walk_backward/bwalk2.png<>uid://c5pb2mrwkbot0::::res://maysprite/walk_backward/bwalk3.png<>uid://cx27iylttqksh::::res://maysprite/walk_backward/bwalk4.png<>res://scripts/Direction.gd
+::res://dialogues/::1714925354
 balloon.gd::GDScript::-1::1713038711::0::1::::<>CanvasLayer<>::
 balloon.tscn::PackedScene::2304415056852043862::1713210223::0::1::::<><>::res://dialogues/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
-main.dialogue::Resource::2023342284941097175::1713748477::1713748477::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+main.dialogue::Resource::2023342284941097175::1714925380::1714925380::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://helpers/::1712956924
 actionable.gd::GDScript::-1::1712784773::0::1::::<>Area2D<>::
 actionable.tscn::PackedScene::5653949228667676273::1712956924::0::1::::<><>::res://helpers/actionable.gd
@@ -120,12 +123,12 @@ TopDownHouse_FloorsAndWalls.png::CompressedTexture2D::4803372462335485312::17137
 TopDownHouse_FurnitureState1.png::CompressedTexture2D::1040080498158451793::1713722095::1713722098::1::::<><>::
 TopDownHouse_FurnitureState2.png::CompressedTexture2D::5458886377615959084::1713722095::1713722098::1::::<><>::
 TopDownHouse_SmallItems.png::CompressedTexture2D::2542728446737038093::1713722095::1713722098::1::::<><>::
-::res://scripts/::1713731123
+::res://scripts/::1714925327
 AnimatedSprite2D.gd::GDScript::-1::1711489399::0::1::::<>AnimatedSprite2D<>::
-CharacterMovement.gd::GDScript::-1::1713039484::0::1::::<>CharacterBody2D<>::
+CharacterMovement.gd::GDScript::-1::1714922861::0::1::::<>CharacterBody2D<>::
 constants.gd::GDScript::-1::1711488930::0::1::::<>Node<>::
 Direction.gd::GDScript::-1::1712786486::0::1::::<>Marker2D<>::
-state.gd::GDScript::-1::1713731123::0::1::::<>Node<>::
+state.gd::GDScript::-1::1714925327::0::1::::<>Node<>::
 ::res://tilesets/::1713042579
 decor_8x8.png::CompressedTexture2D::2193718565968626244::1708117661::1711473678::1::::<><>::
 decor_16x16.png::CompressedTexture2D::5309778248082233939::1708117661::1711473678::1::::<><>::

@@ -1,8 +1,8 @@
 CollisionShape2D
-Area2D
 StaticBody2D
-RigidBody2D
+Area2D
 TileMap
+RigidBody2D
 Marker2D
 Sprite2D
 Timer
