@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b4m67vsey0aqn"]
+[gd_scene load_steps=24 format=3 uid="uid://b4m67vsey0aqn"]
 
 [ext_resource type="Texture2D" uid="uid://cao13weoqt6mu" path="res://retro_interior/TopDownHouse_FloorsAndWalls.png" id="1_ucryo"]
 [ext_resource type="Texture2D" uid="uid://y5rodnte261i" path="res://antique items sheet 1.2.png" id="2_ic3b3"]
@@ -3343,6 +3343,9 @@ size = Vector2(30, 42)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_101n1"]
 size = Vector2(26, 27)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16gk8"]
+size = Vector2(33, 32)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3387,6 +3390,15 @@ dialogue_start = "closet"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable_Closet"]
 position = Vector2(3, 3.5)
 shape = SubResource("RectangleShape2D_101n1")
+
+[node name="Actionable" parent="." instance=ExtResource("10_xd2ro")]
+position = Vector2(64, -38)
+dialogue_resource = ExtResource("11_y3gvs")
+dialogue_start = "dads_desk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_16gk8")
 
 [connection signal="body_entered" from="DoorToHall/Area2D" to="DoorToHall/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="DoorToHall/Area2D" to="DoorToHall/Area2D" method="_on_body_exited"]

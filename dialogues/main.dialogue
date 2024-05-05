@@ -21,17 +21,34 @@ if State.snooped:
 
 April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.
 - Snoop
-		You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that. 
+		You carefully slide her desk drawer open. There's some paper scraps, some of her watercolor paints, a folded piece of paper, and a book -- her diary?
+		May: April would totally kill me if I read that...
 		set State.snooped = true 
 		=> looking_in_desk
 - Leave
 		=> end_dialogue
 
 ~ looking_in_desk 
-Keep looking through April's desk?
-- Diary => diary 
-- Paper => paper
-- Stop looking => end_dialogue
+if !(State.looking_for_password):
+	Keep looking through April's desk?
+	- Diary => diary 
+	- Paper => paper
+	- Stop looking => end_dialogue
+if State.looking_for_password:
+	Wait... one of those scraps of paper is the other half of a sticky note.
+	- Sticky note => sticky_note
+	- Diary => diary 
+	- Paper => paper
+	- Stop looking => end_dialogue
+	
+=> end_dialogue
+
+~ sticky_note
+You pick it up. It's a perfect match to the half from Dad's desk.
+May: Yes! It's Dad's password\: 04-2012-05-2015. 
+May: Wow, Dad should really be able to remember our birthdays without writing it down.
+May: So April took it? I wonder what she was looking for on Dad's computer.
+set State.know_password = true
 => end_dialogue
 
 ~ diary
@@ -105,8 +122,10 @@ May: He doesn't sleep much though.
 => end_dialogue
 
 ~ closet
+if (State.key):
+	May: I wonder where this key goes...
+	=> end_dialogue
 
-set State.key_location = true
 if !(State.key_location):
 	May: It's just a bunch of Dad's clothes and random boxes of his old stuff.
 else:
@@ -115,22 +134,151 @@ else:
 => end_dialogue
 
 ~ key_box
-- Open it. 
+- Open it
 	set State.key = true
 	May: There's a key inside... 
+	You pick the key up.
 	=> end_dialogue
 - Leave it => end_dialogue
 => end_dialogue
 
+~ dads_desk
+if (State.saw_desk == false):
+	set State.saw_desk = true
+	Dad's desk isn't as cluttered as yours or April's. It's just his work computer and an empty coffee cup, plus a notepad with a couple of meaningless notes about work jotted down.
+	- Computer => computer
+	- Desk drawer => desk_drawer
+	- Leave => end_dialogue
+else: 
+	Dad's desk.
+	- Computer => computer
+	- Desk drawer => desk_drawer
+	- Leave => end_dialogue
+=> end_dialogue
 
-~ study
-if State.study_locked:
-	May: Mom's old study...
-	May: It's locked, like always.
+~ computer
+if (State.computer_locked == false):
+	=> unlocked_computer
+if (State.computer_locked):
+	if (State.know_password):
+		May: Dad's computer. There's a password on it.
+		- Guess password? => guess_pass
+		- Put in the password => unlocked_computer
+		- Leave => end_dialogue
+	else:
+		May: Dad's computer. There's a password on it.
+		- Guess password? => guess_pass
+		- Leave => end_dialogue
+=> end_dialogue
+	
+
+~ unlocked_computer
+set State.computer_locked = false
+set State.already_unlocked = State.already_unlocked + 1
+if (State.already_unlocked = 0):
+	Dad's computer is unlocked. The home screen is a picture of you and April toddling around the new house.
+	- Check Dad's email => emails
+	- Play a game
+		% You play Tetris for a while.
+		% You play online chess for a while.
+		% You play Poptropica for a while.
+		% You play minesweeper for a while.
+	- Leave => end_dialogue
+else: 
+	Dad's computer is unlocked.
+	- Check Dad's email => emails
+	- Play a game
+		% You play Tetris for a while.
+		% You play online chess for a while.
+		% You play Poptropica for a while.
+		% You play minesweeper for a while.
+		=> unlocked_computer
+	- Leave => end_dialogue
+	
+=> end_dialogue
+
+~ emails
+Wow, you're a major snooper today. You open Dad's email and scan through the first page. It's mostly work stuff. You notice he recently sent an email to Mom, though.
+- Read it
+	set State.key_location = true
+	May: "I don't think you should be contacting the girls. April's been asking about it, and you're just confusing her. If you're back again, then you can take the last of your stuff and go. It's been sitting in my closet long enough. After that, we don't want to hear from you again." 
+	Wow. You rarely hear Dad sounding angry like that. Mom hasn't contacted you -- did April hear from her and not say anything? 
+	=> unlocked_computer
+- Don't read it
+	May: It's really none of my business...
+=> unlocked_computer
+
+
+~ guess_pass
+if (State.looking_for_password):
+	What would Dad's password be...
+	- 12345
+		May: Wrong. Well, at least Dad doesn't have the most obvious password in the world.
+		=> guess_pass
+	- imstupid
+		May: Wrong. Hm.  He must have a high opinion of himself.
+		=> guess_pass
+	- 050714
+		May: Wrong. Wow, not my birthday? Cold, Dad.
+		=> guess_pass
+	- password
+		May: Wrong. I guess there must be another half to that sticky note.
+		May: It would be pretty dumb to make your password 'password' anyways.
+		=> guess_pass
+	- Stop guessing => end_dialogue
+What would Dad's password be...
+- 12345
+	May: Wrong. Well, at least Dad doesn't have the most obvious password in the world.
+	=> guess_pass
+- imstupid
+	May: Wrong. Hm.  He must have a high opinion of himself.
+	=> guess_pass
+- 050714
+	May: Wrong. Wow, not my birthday? Cold, Dad.
+	=> guess_pass
+- Stop guessing => end_dialogue
 
 => end_dialogue
 
+~ desk_drawer
+if (!State.know_password):
+	You pull open the desk drawer. Just a few pens, random knick knacks, and a sticky note that was ripped in half.
+	The half that remains just says "password". 
+	if (!State.looking_for_password):
+		May: Well that's no use. Where's the rest of it?
+		set State.looking_for_password = true
+else:
+	You pull open the desk drawer. Just a few pens, random knick knacks, and the ripped sticky note. The other half must have Dad's password on it.
+=> dads_desk
 
+
+
+
+~ study
+#set State.key = true #for testing only
+if State.game_ended:
+	=> END
+if State.study_locked:
+	May: Mom's old study...
+	May: It's locked, like always.
+	if State.key:
+		May: Maybe this key fits it?
+		- Try it => end_game
+		- Leave => end_dialogue
+=> end_dialogue
+
+
+~ end_game
+if !(State.game_ended):
+	The key clicks into place. The door creaks open...
+	do TransitionScreen.game_over()
+	May: Mom's study. 
+	May: April was here.
+	May: But... where is she now?
+
+set State.game_ended = true
+
+=> END
 
 ~ end_dialogue
 set State.frozen = false

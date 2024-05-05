@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var force_coefficient = 20
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
-
+@export var dialogue: DialogueResource
 
 func _process(_delta):
 	if (!State.frozen):
@@ -30,15 +30,24 @@ func _ready():
 	#print("Current scene: " + State.current_scene)
 	#print("Last scene: " + State.last_scene)
 	
+	if (State.current_scene == "res://scene1.tscn"):
+		if (State.awakening == true):
+			position = Vector2(-91, 33)
+			State.awakening = false
 	if (State.current_scene == "res://hallway.tscn"):
 		#default: May was in bedroom, no need to handle
-		
 		#May was in dad's room
 		if (State.last_scene == "res://dads_room.tscn"):
 			position += Vector2(63,0)
 			
 		if (State.last_scene == "res://bathroom.tscn"):
 			position += Vector2(-100,40)
+	
+	TransitionScreen.fade_in()
+	await TransitionScreen.on_transition_finished
+	
+	
+	
 
 
 func get_input(delta):

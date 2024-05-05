@@ -7,21 +7,29 @@ script = ExtResource("1_32dtu")
 using_states = PackedStringArray()
 titles = {
 "aprils_art": "14",
-"aprils_bed": "57",
+"aprils_bed": "74",
 "aprils_desk": "19",
-"bathroom": "88",
-"clock": "83",
-"closet": "109",
-"dads_bed": "103",
-"diary": "38",
-"end_dialogue": "136",
-"key_box": "118",
-"looking_in_desk": "31",
+"bathroom": "105",
+"clock": "100",
+"closet": "125",
+"computer": "160",
+"dads_bed": "120",
+"dads_desk": "146",
+"desk_drawer": "244",
+"diary": "55",
+"emails": "201",
+"end_dialogue": "284",
+"end_game": "272",
+"guess_pass": "213",
+"key_box": "137",
+"looking_in_desk": "32",
 "may_bed": "2",
-"mays_desk": "61",
-"paper": "48",
-"stairs": "71",
-"study": "127"
+"mays_desk": "78",
+"paper": "65",
+"stairs": "88",
+"sticky_note": "47",
+"study": "259",
+"unlocked_computer": "176"
 }
 character_names = PackedStringArray("May")
 first_title = "2"
@@ -33,55 +41,168 @@ lines = {
 "type": &"title"
 },
 "100": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
 "id": "100",
-"is_snippet": false,
-"next_id": "136",
-"type": &"goto"
+"next_id": "102",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Way past my bedtime. But no one's here to get me in trouble.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Way past my bedtime. But no one's here to get me in trouble.",
+"type": &"dialogue"
 },
 "102": {
 "id": "102",
-"next_id": "103",
-"text": "dads_bed",
-"type": &"title"
-},
-"103": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "103",
-"next_id": "104",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Dad's bed.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Dad's bed.",
-"type": &"dialogue"
-},
-"104": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "104",
-"next_id": "105",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "He doesn't sleep much though.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "He doesn't sleep much though.",
-"type": &"dialogue"
-},
-"105": {
-"id": "105",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "284",
 "type": &"goto"
 },
-"107": {
-"id": "107",
-"next_id": "109",
-"text": "closet",
+"104": {
+"id": "104",
+"next_id": "105",
+"text": "bathroom",
 "type": &"title"
 },
+"105": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "bathroom"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 0
+}, {
+"type": "colon"
+}])
+},
+"id": "105",
+"next_conditional_id": "107",
+"next_id": "106",
+"next_id_after": "115",
+"type": &"condition"
+},
+"106": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "106",
+"next_id": "115",
+"notes": "",
+"parent_id": "105",
+"tags": PackedStringArray(),
+"text": "Everything looks ordinary in here.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Everything looks ordinary in here.",
+"type": &"dialogue"
+},
+"107": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "bathroom"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 1
+}, {
+"type": "colon"
+}])
+},
+"id": "107",
+"next_conditional_id": "109",
+"next_id": "108",
+"next_id_after": "115",
+"type": &"condition"
+},
+"108": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "108",
+"next_id": "115",
+"notes": "",
+"parent_id": "107",
+"tags": PackedStringArray(),
+"text": "Nothing to see here.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nothing to see here.",
+"type": &"dialogue"
+},
 "109": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "bathroom"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 2
+}, {
+"type": "colon"
+}])
+},
 "id": "109",
+"next_conditional_id": "111",
+"next_id": "110",
+"next_id_after": "115",
+"type": &"condition"
+},
+"110": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "110",
+"next_id": "115",
+"notes": "",
+"parent_id": "109",
+"tags": PackedStringArray(),
+"text": "I should look in one of the other rooms for more clues.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I should look in one of the other rooms for more clues.",
+"type": &"dialogue"
+},
+"111": {
+"id": "111",
+"next_conditional_id": "115",
+"next_id": "112",
+"next_id_after": "115",
+"type": &"condition"
+},
+"112": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "112",
+"next_id": "115",
+"notes": "",
+"parent_id": "111",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"dialogue"
+},
+"115": {
+"id": "115",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -90,20 +211,128 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "key_location"
+"value": "bathroom"
 }, {
 "type": "assignment",
 "value": "="
 }, {
 "type": "variable",
-"value": "true"
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "bathroom"
+}, {
+"type": "operator",
+"value": "+"
+}, {
+"type": "number",
+"value": 1
 }]),
 "is_blocking": true
 },
-"next_id": "110",
+"next_id": "117",
 "type": &"mutation"
 },
-"110": {
+"117": {
+"id": "117",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"119": {
+"id": "119",
+"next_id": "120",
+"text": "dads_bed",
+"type": &"title"
+},
+"12": {
+"id": "12",
+"next_id": "14",
+"text": "aprils_art",
+"type": &"title"
+},
+"120": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "120",
+"next_id": "121",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Dad's bed.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's bed.",
+"type": &"dialogue"
+},
+"121": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "121",
+"next_id": "122",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "He doesn't sleep much though.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "He doesn't sleep much though.",
+"type": &"dialogue"
+},
+"122": {
+"id": "122",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"124": {
+"id": "124",
+"next_id": "125",
+"text": "closet",
+"type": &"title"
+},
+"125": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "125",
+"next_conditional_id": "129",
+"next_id": "126",
+"next_id_after": "129",
+"type": &"condition"
+},
+"126": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "126",
+"next_id": "127",
+"notes": "",
+"parent_id": "125",
+"tags": PackedStringArray(),
+"text": "I wonder where this key goes...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I wonder where this key goes...",
+"type": &"dialogue"
+},
+"127": {
+"id": "127",
+"is_snippet": false,
+"next_id": "284",
+"parent_id": "125",
+"type": &"goto"
+},
+"129": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "not"
@@ -122,80 +351,80 @@ lines = {
 "type": "colon"
 }])
 },
-"id": "110",
-"next_conditional_id": "112",
-"next_id": "111",
-"next_id_after": "115",
+"id": "129",
+"next_conditional_id": "131",
+"next_id": "130",
+"next_id_after": "134",
 "type": &"condition"
 },
-"111": {
+"130": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
-"id": "111",
-"next_id": "115",
+"id": "130",
+"next_id": "134",
 "notes": "",
-"parent_id": "110",
+"parent_id": "129",
 "tags": PackedStringArray(),
 "text": "It's just a bunch of Dad's clothes and random boxes of his old stuff.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "It's just a bunch of Dad's clothes and random boxes of his old stuff.",
 "type": &"dialogue"
 },
-"112": {
-"id": "112",
-"next_conditional_id": "115",
-"next_id": "113",
-"next_id_after": "115",
+"131": {
+"id": "131",
+"next_conditional_id": "134",
+"next_id": "132",
+"next_id_after": "134",
 "type": &"condition"
 },
-"113": {
+"132": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "113",
-"next_id": "114",
+"id": "132",
+"next_id": "133",
 "notes": "",
-"parent_id": "112",
+"parent_id": "131",
 "tags": PackedStringArray(),
 "text": "Remembering the email from Mom, you duck into the back of the closet and see a small box. It doesn't look big enough to fit much though.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Remembering the email from Mom, you duck into the back of the closet and see a small box. It doesn't look big enough to fit much though.",
 "type": &"dialogue"
 },
-"114": {
-"id": "114",
+"133": {
+"id": "133",
 "is_snippet": false,
-"next_id": "118",
-"parent_id": "112",
+"next_id": "137",
+"parent_id": "131",
 "type": &"goto"
 },
-"115": {
-"id": "115",
+"134": {
+"id": "134",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "284",
 "type": &"goto"
 },
-"117": {
-"id": "117",
-"next_id": "118",
+"136": {
+"id": "136",
+"next_id": "137",
 "text": "key_box",
 "type": &"title"
 },
-"118": {
+"137": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "118",
-"next_id": "119",
-"next_id_after": "123",
+"id": "137",
+"next_id": "138",
+"next_id_after": "143",
 "notes": "",
-"responses": PackedStringArray("118", "122"),
+"responses": PackedStringArray("137", "142"),
 "tags": PackedStringArray(),
-"text": "Open it.",
+"text": "Open it",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Open it.",
+"translation_key": "Open it",
 "type": &"response"
 },
-"119": {
-"id": "119",
+"138": {
+"id": "138",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -214,147 +443,22 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "120",
-"parent_id": "118",
+"next_id": "139",
+"parent_id": "137",
 "type": &"mutation"
 },
-"12": {
-"id": "12",
-"next_id": "14",
-"text": "aprils_art",
-"type": &"title"
-},
-"120": {
+"139": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
-"id": "120",
-"next_id": "121",
+"id": "139",
+"next_id": "140",
 "notes": "",
-"parent_id": "118",
+"parent_id": "137",
 "tags": PackedStringArray(),
 "text": "There's a key inside...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "There's a key inside...",
 "type": &"dialogue"
-},
-"121": {
-"id": "121",
-"is_snippet": false,
-"next_id": "136",
-"parent_id": "118",
-"type": &"goto"
-},
-"122": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "122",
-"next_id": "136",
-"next_id_after": "123",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Leave it",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Leave it",
-"type": &"response"
-},
-"123": {
-"id": "123",
-"is_snippet": false,
-"next_id": "136",
-"type": &"goto"
-},
-"126": {
-"id": "126",
-"next_id": "127",
-"text": "study",
-"type": &"title"
-},
-"127": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "study_locked"
-}, {
-"type": "colon"
-}])
-},
-"id": "127",
-"next_conditional_id": "131",
-"next_id": "128",
-"next_id_after": "131",
-"type": &"condition"
-},
-"128": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "128",
-"next_id": "129",
-"notes": "",
-"parent_id": "127",
-"tags": PackedStringArray(),
-"text": "Mom's old study...",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Mom's old study...",
-"type": &"dialogue"
-},
-"129": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "129",
-"next_id": "131",
-"notes": "",
-"parent_id": "127",
-"tags": PackedStringArray(),
-"text": "It's locked, like always.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "It's locked, like always.",
-"type": &"dialogue"
-},
-"131": {
-"id": "131",
-"is_snippet": false,
-"next_id": "136",
-"type": &"goto"
-},
-"135": {
-"id": "135",
-"next_id": "136",
-"text": "end_dialogue",
-"type": &"title"
-},
-"136": {
-"id": "136",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "frozen"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "false"
-}]),
-"is_blocking": true
-},
-"next_id": "137",
-"type": &"mutation"
-},
-"137": {
-"id": "137",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
 },
 "14": {
 "character": "May",
@@ -368,17 +472,689 @@ lines = {
 "translation_key": "April's artwork! She's so talented.",
 "type": &"dialogue"
 },
+"140": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "140",
+"next_id": "141",
+"notes": "",
+"parent_id": "137",
+"tags": PackedStringArray(),
+"text": "You pick the key up.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You pick the key up.",
+"type": &"dialogue"
+},
+"141": {
+"id": "141",
+"is_snippet": false,
+"next_id": "284",
+"parent_id": "137",
+"type": &"goto"
+},
+"142": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "142",
+"next_id": "284",
+"next_id_after": "143",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Leave it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave it",
+"type": &"response"
+},
+"143": {
+"id": "143",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"145": {
+"id": "145",
+"next_id": "146",
+"text": "dads_desk",
+"type": &"title"
+},
+"146": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_desk"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "146",
+"next_conditional_id": "152",
+"next_id": "147",
+"next_id_after": "157",
+"type": &"condition"
+},
+"147": {
+"id": "147",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_desk"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "148",
+"parent_id": "146",
+"type": &"mutation"
+},
+"148": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "148",
+"next_id": "149",
+"notes": "",
+"parent_id": "146",
+"tags": PackedStringArray(),
+"text": "Dad's desk isn't as cluttered as yours or April's. It's just his work computer and an empty coffee cup, plus a notepad with a couple of meaningless notes about work jotted down.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's desk isn't as cluttered as yours or April's. It's just his work computer and an empty coffee cup, plus a notepad with a couple of meaningless notes about work jotted down.",
+"type": &"dialogue"
+},
+"149": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "149",
+"next_id": "160",
+"next_id_after": "157",
+"notes": "",
+"parent_id": "146",
+"responses": PackedStringArray("149", "150", "151"),
+"tags": PackedStringArray(),
+"text": "Computer",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Computer",
+"type": &"response"
+},
 "15": {
 "id": "15",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "284",
 "type": &"goto"
+},
+"150": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "150",
+"next_id": "244",
+"next_id_after": "157",
+"notes": "",
+"parent_id": "146",
+"tags": PackedStringArray(),
+"text": "Desk drawer",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Desk drawer",
+"type": &"response"
+},
+"151": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "151",
+"next_id": "284",
+"next_id_after": "157",
+"notes": "",
+"parent_id": "146",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"152": {
+"id": "152",
+"next_conditional_id": "157",
+"next_id": "153",
+"next_id_after": "157",
+"type": &"condition"
+},
+"153": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "153",
+"next_id": "154",
+"notes": "",
+"parent_id": "152",
+"tags": PackedStringArray(),
+"text": "Dad's desk.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's desk.",
+"type": &"dialogue"
+},
+"154": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "154",
+"next_id": "160",
+"next_id_after": "157",
+"notes": "",
+"parent_id": "152",
+"responses": PackedStringArray("154", "155", "156"),
+"tags": PackedStringArray(),
+"text": "Computer",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Computer",
+"type": &"response"
+},
+"155": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "155",
+"next_id": "244",
+"next_id_after": "157",
+"notes": "",
+"parent_id": "152",
+"tags": PackedStringArray(),
+"text": "Desk drawer",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Desk drawer",
+"type": &"response"
+},
+"156": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "156",
+"next_id": "284",
+"next_id_after": "157",
+"notes": "",
+"parent_id": "152",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"157": {
+"id": "157",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"159": {
+"id": "159",
+"next_id": "160",
+"text": "computer",
+"type": &"title"
+},
+"160": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "computer_locked"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "160",
+"next_conditional_id": "162",
+"next_id": "161",
+"next_id_after": "162",
+"type": &"condition"
+},
+"161": {
+"id": "161",
+"is_snippet": false,
+"next_id": "176",
+"parent_id": "160",
+"type": &"goto"
+},
+"162": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "computer_locked"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "162",
+"next_conditional_id": "172",
+"next_id": "163",
+"next_id_after": "172",
+"type": &"condition"
+},
+"163": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "know_password"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "163",
+"next_conditional_id": "168",
+"next_id": "164",
+"next_id_after": "172",
+"parent_id": "162",
+"type": &"condition"
+},
+"164": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "164",
+"next_id": "165",
+"notes": "",
+"parent_id": "163",
+"tags": PackedStringArray(),
+"text": "Dad's computer. There's a password on it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's computer. There's a password on it.",
+"type": &"dialogue"
+},
+"165": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "165",
+"next_id": "213",
+"next_id_after": "172",
+"notes": "",
+"parent_id": "163",
+"responses": PackedStringArray("165", "166", "167"),
+"tags": PackedStringArray(),
+"text": "Guess password?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Guess password?",
+"type": &"response"
+},
+"166": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "166",
+"next_id": "176",
+"next_id_after": "172",
+"notes": "",
+"parent_id": "163",
+"tags": PackedStringArray(),
+"text": "Put in the password",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Put in the password",
+"type": &"response"
+},
+"167": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "167",
+"next_id": "284",
+"next_id_after": "172",
+"notes": "",
+"parent_id": "163",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"168": {
+"id": "168",
+"next_conditional_id": "172",
+"next_id": "169",
+"next_id_after": "172",
+"parent_id": "162",
+"type": &"condition"
+},
+"169": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "169",
+"next_id": "170",
+"notes": "",
+"parent_id": "168",
+"tags": PackedStringArray(),
+"text": "Dad's computer. There's a password on it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's computer. There's a password on it.",
+"type": &"dialogue"
+},
+"170": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "170",
+"next_id": "213",
+"next_id_after": "172",
+"notes": "",
+"parent_id": "168",
+"responses": PackedStringArray("170", "171"),
+"tags": PackedStringArray(),
+"text": "Guess password?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Guess password?",
+"type": &"response"
+},
+"171": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "171",
+"next_id": "284",
+"next_id_after": "172",
+"notes": "",
+"parent_id": "168",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"172": {
+"id": "172",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"175": {
+"id": "175",
+"next_id": "176",
+"text": "unlocked_computer",
+"type": &"title"
+},
+"176": {
+"id": "176",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "computer_locked"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "177",
+"type": &"mutation"
+},
+"177": {
+"id": "177",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "already_unlocked"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "already_unlocked"
+}, {
+"type": "operator",
+"value": "+"
+}, {
+"type": "number",
+"value": 1
+}]),
+"is_blocking": true
+},
+"next_id": "178",
+"type": &"mutation"
+},
+"178": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "already_unlocked"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 0
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "178",
+"next_conditional_id": "187",
+"next_id": "179",
+"next_id_after": "198",
+"type": &"condition"
+},
+"179": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "179",
+"next_id": "180",
+"notes": "",
+"parent_id": "178",
+"tags": PackedStringArray(),
+"text": "Dad's computer is unlocked. The home screen is a picture of you and April toddling around the new house.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's computer is unlocked. The home screen is a picture of you and April toddling around the new house.",
+"type": &"dialogue"
 },
 "18": {
 "id": "18",
 "next_id": "19",
 "text": "aprils_desk",
 "type": &"title"
+},
+"180": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "180",
+"next_id": "201",
+"next_id_after": "198",
+"notes": "",
+"parent_id": "178",
+"responses": PackedStringArray("180", "181", "186"),
+"tags": PackedStringArray(),
+"text": "Check Dad's email",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Check Dad's email",
+"type": &"response"
+},
+"181": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "181",
+"next_id": "182",
+"next_id_after": "198",
+"notes": "",
+"parent_id": "178",
+"tags": PackedStringArray(),
+"text": "Play a game",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Play a game",
+"type": &"response"
+},
+"182": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "182",
+"next_id": "198",
+"notes": "",
+"parent_id": "181",
+"siblings": [{
+"id": "182",
+"weight": 1.0
+}, {
+"id": "183",
+"weight": 1.0
+}, {
+"id": "184",
+"weight": 1.0
+}, {
+"id": "185",
+"weight": 1.0
+}],
+"tags": PackedStringArray(),
+"text": "You play Tetris for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play Tetris for a while.",
+"type": &"dialogue"
+},
+"183": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "183",
+"next_id": "198",
+"notes": "",
+"parent_id": "181",
+"tags": PackedStringArray(),
+"text": "You play online chess for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play online chess for a while.",
+"type": &"dialogue"
+},
+"184": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "184",
+"next_id": "198",
+"notes": "",
+"parent_id": "181",
+"tags": PackedStringArray(),
+"text": "You play Poptropica for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play Poptropica for a while.",
+"type": &"dialogue"
+},
+"185": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "185",
+"next_id": "198",
+"notes": "",
+"parent_id": "181",
+"tags": PackedStringArray(),
+"text": "You play minesweeper for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play minesweeper for a while.",
+"type": &"dialogue"
+},
+"186": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "186",
+"next_id": "284",
+"next_id_after": "198",
+"notes": "",
+"parent_id": "178",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"187": {
+"id": "187",
+"next_conditional_id": "198",
+"next_id": "188",
+"next_id_after": "198",
+"type": &"condition"
+},
+"188": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "188",
+"next_id": "189",
+"notes": "",
+"parent_id": "187",
+"tags": PackedStringArray(),
+"text": "Dad's computer is unlocked.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dad's computer is unlocked.",
+"type": &"dialogue"
+},
+"189": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "189",
+"next_id": "201",
+"next_id_after": "198",
+"notes": "",
+"parent_id": "187",
+"responses": PackedStringArray("189", "190", "196"),
+"tags": PackedStringArray(),
+"text": "Check Dad's email",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Check Dad's email",
+"type": &"response"
 },
 "19": {
 "condition": {
@@ -399,6 +1175,112 @@ lines = {
 "next_id": "20",
 "next_id_after": "22",
 "type": &"condition"
+},
+"190": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "190",
+"next_id": "191",
+"next_id_after": "198",
+"notes": "",
+"parent_id": "187",
+"tags": PackedStringArray(),
+"text": "Play a game",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Play a game",
+"type": &"response"
+},
+"191": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "191",
+"next_id": "195",
+"notes": "",
+"parent_id": "190",
+"siblings": [{
+"id": "191",
+"weight": 1.0
+}, {
+"id": "192",
+"weight": 1.0
+}, {
+"id": "193",
+"weight": 1.0
+}, {
+"id": "194",
+"weight": 1.0
+}],
+"tags": PackedStringArray(),
+"text": "You play Tetris for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play Tetris for a while.",
+"type": &"dialogue"
+},
+"192": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "192",
+"next_id": "195",
+"notes": "",
+"parent_id": "190",
+"tags": PackedStringArray(),
+"text": "You play online chess for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play online chess for a while.",
+"type": &"dialogue"
+},
+"193": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "193",
+"next_id": "195",
+"notes": "",
+"parent_id": "190",
+"tags": PackedStringArray(),
+"text": "You play Poptropica for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play Poptropica for a while.",
+"type": &"dialogue"
+},
+"194": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "194",
+"next_id": "195",
+"notes": "",
+"parent_id": "190",
+"tags": PackedStringArray(),
+"text": "You play minesweeper for a while.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You play minesweeper for a while.",
+"type": &"dialogue"
+},
+"195": {
+"id": "195",
+"is_snippet": false,
+"next_id": "176",
+"parent_id": "190",
+"type": &"goto"
+},
+"196": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "196",
+"next_id": "284",
+"next_id_after": "198",
+"notes": "",
+"parent_id": "187",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"198": {
+"id": "198",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
 },
 "2": {
 "condition": {
@@ -429,9 +1311,234 @@ lines = {
 "20": {
 "id": "20",
 "is_snippet": false,
-"next_id": "31",
+"next_id": "32",
 "parent_id": "19",
 "type": &"goto"
+},
+"200": {
+"id": "200",
+"next_id": "201",
+"text": "emails",
+"type": &"title"
+},
+"201": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "201",
+"next_id": "202",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Wow, you're a major snooper today. You open Dad's email and scan through the first page. It's mostly work stuff. You notice he recently sent an email to Mom, though.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wow, you're a major snooper today. You open Dad's email and scan through the first page. It's mostly work stuff. You notice he recently sent an email to Mom, though.",
+"type": &"dialogue"
+},
+"202": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "202",
+"next_id": "203",
+"next_id_after": "209",
+"notes": "",
+"responses": PackedStringArray("202", "207"),
+"tags": PackedStringArray(),
+"text": "Read it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Read it",
+"type": &"response"
+},
+"203": {
+"id": "203",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key_location"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "204",
+"parent_id": "202",
+"type": &"mutation"
+},
+"204": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "204",
+"next_id": "205",
+"notes": "",
+"parent_id": "202",
+"tags": PackedStringArray(),
+"text": "\"I don't think you should be contacting the girls. April's been asking about it, and you're just confusing her. If you're back again, then you can take the last of your stuff and go. It's been sitting in my closet long enough. After that, we don't want to hear from you again.\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"I don't think you should be contacting the girls. April's been asking about it, and you're just confusing her. If you're back again, then you can take the last of your stuff and go. It's been sitting in my closet long enough. After that, we don't want to hear from you again.\"",
+"type": &"dialogue"
+},
+"205": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "205",
+"next_id": "206",
+"notes": "",
+"parent_id": "202",
+"tags": PackedStringArray(),
+"text": "Wow. You rarely hear Dad sounding angry like that. Mom hasn't contacted you -- did April hear from her and not say anything?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wow. You rarely hear Dad sounding angry like that. Mom hasn't contacted you -- did April hear from her and not say anything?",
+"type": &"dialogue"
+},
+"206": {
+"id": "206",
+"is_snippet": false,
+"next_id": "176",
+"parent_id": "202",
+"type": &"goto"
+},
+"207": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "207",
+"next_id": "208",
+"next_id_after": "209",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Don't read it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't read it",
+"type": &"response"
+},
+"208": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "208",
+"next_id": "209",
+"notes": "",
+"parent_id": "207",
+"tags": PackedStringArray(),
+"text": "It's really none of my business...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's really none of my business...",
+"type": &"dialogue"
+},
+"209": {
+"id": "209",
+"is_snippet": false,
+"next_id": "176",
+"type": &"goto"
+},
+"212": {
+"id": "212",
+"next_id": "213",
+"text": "guess_pass",
+"type": &"title"
+},
+"213": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "looking_for_password"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "213",
+"next_conditional_id": "229",
+"next_id": "214",
+"next_id_after": "229",
+"type": &"condition"
+},
+"214": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "214",
+"next_id": "215",
+"notes": "",
+"parent_id": "213",
+"tags": PackedStringArray(),
+"text": "What would Dad's password be...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What would Dad's password be...",
+"type": &"dialogue"
+},
+"215": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "215",
+"next_id": "216",
+"next_id_after": "229",
+"notes": "",
+"parent_id": "213",
+"responses": PackedStringArray("215", "218", "221", "224", "228"),
+"tags": PackedStringArray(),
+"text": "12345",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "12345",
+"type": &"response"
+},
+"216": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "216",
+"next_id": "217",
+"notes": "",
+"parent_id": "215",
+"tags": PackedStringArray(),
+"text": "Wrong. Well, at least Dad doesn't have the most obvious password in the world.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. Well, at least Dad doesn't have the most obvious password in the world.",
+"type": &"dialogue"
+},
+"217": {
+"id": "217",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "215",
+"type": &"goto"
+},
+"218": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "218",
+"next_id": "219",
+"next_id_after": "229",
+"notes": "",
+"parent_id": "213",
+"tags": PackedStringArray(),
+"text": "imstupid",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "imstupid",
+"type": &"response"
+},
+"219": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "219",
+"next_id": "220",
+"notes": "",
+"parent_id": "218",
+"tags": PackedStringArray(),
+"text": "Wrong. Hm.  He must have a high opinion of himself.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. Hm.  He must have a high opinion of himself.",
+"type": &"dialogue"
 },
 "22": {
 "character": "",
@@ -445,18 +1552,245 @@ lines = {
 "translation_key": "April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.",
 "type": &"dialogue"
 },
+"220": {
+"id": "220",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "218",
+"type": &"goto"
+},
+"221": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "221",
+"next_id": "222",
+"next_id_after": "229",
+"notes": "",
+"parent_id": "213",
+"tags": PackedStringArray(),
+"text": "050714",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "050714",
+"type": &"response"
+},
+"222": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "222",
+"next_id": "223",
+"notes": "",
+"parent_id": "221",
+"tags": PackedStringArray(),
+"text": "Wrong. Wow, not my birthday? Cold, Dad.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. Wow, not my birthday? Cold, Dad.",
+"type": &"dialogue"
+},
+"223": {
+"id": "223",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "221",
+"type": &"goto"
+},
+"224": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "224",
+"next_id": "225",
+"next_id_after": "229",
+"notes": "",
+"parent_id": "213",
+"tags": PackedStringArray(),
+"text": "password",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "password",
+"type": &"response"
+},
+"225": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "225",
+"next_id": "226",
+"notes": "",
+"parent_id": "224",
+"tags": PackedStringArray(),
+"text": "Wrong. I guess there must be another half to that sticky note.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. I guess there must be another half to that sticky note.",
+"type": &"dialogue"
+},
+"226": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "226",
+"next_id": "227",
+"notes": "",
+"parent_id": "224",
+"tags": PackedStringArray(),
+"text": "It would be pretty dumb to make your password 'password' anyways.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It would be pretty dumb to make your password 'password' anyways.",
+"type": &"dialogue"
+},
+"227": {
+"id": "227",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "224",
+"type": &"goto"
+},
+"228": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "228",
+"next_id": "284",
+"next_id_after": "229",
+"notes": "",
+"parent_id": "213",
+"tags": PackedStringArray(),
+"text": "Stop guessing",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stop guessing",
+"type": &"response"
+},
+"229": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "229",
+"next_id": "230",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "What would Dad's password be...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What would Dad's password be...",
+"type": &"dialogue"
+},
 "23": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "23",
 "next_id": "24",
-"next_id_after": "31",
+"next_id_after": "32",
 "notes": "",
-"responses": PackedStringArray("23", "27"),
+"responses": PackedStringArray("23", "28"),
 "tags": PackedStringArray(),
 "text": "Snoop",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Snoop",
+"type": &"response"
+},
+"230": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "230",
+"next_id": "231",
+"next_id_after": "241",
+"notes": "",
+"responses": PackedStringArray("230", "233", "236", "239"),
+"tags": PackedStringArray(),
+"text": "12345",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "12345",
+"type": &"response"
+},
+"231": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "231",
+"next_id": "232",
+"notes": "",
+"parent_id": "230",
+"tags": PackedStringArray(),
+"text": "Wrong. Well, at least Dad doesn't have the most obvious password in the world.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. Well, at least Dad doesn't have the most obvious password in the world.",
+"type": &"dialogue"
+},
+"232": {
+"id": "232",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "230",
+"type": &"goto"
+},
+"233": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "233",
+"next_id": "234",
+"next_id_after": "241",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "imstupid",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "imstupid",
+"type": &"response"
+},
+"234": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "234",
+"next_id": "235",
+"notes": "",
+"parent_id": "233",
+"tags": PackedStringArray(),
+"text": "Wrong. Hm.  He must have a high opinion of himself.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. Hm.  He must have a high opinion of himself.",
+"type": &"dialogue"
+},
+"235": {
+"id": "235",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "233",
+"type": &"goto"
+},
+"236": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "236",
+"next_id": "237",
+"next_id_after": "241",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "050714",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "050714",
+"type": &"response"
+},
+"237": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "237",
+"next_id": "238",
+"notes": "",
+"parent_id": "236",
+"tags": PackedStringArray(),
+"text": "Wrong. Wow, not my birthday? Cold, Dad.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong. Wow, not my birthday? Cold, Dad.",
+"type": &"dialogue"
+},
+"238": {
+"id": "238",
+"is_snippet": false,
+"next_id": "213",
+"parent_id": "236",
+"type": &"goto"
+},
+"239": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "239",
+"next_id": "284",
+"next_id_after": "241",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Stop guessing",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stop guessing",
 "type": &"response"
 },
 "24": {
@@ -467,13 +1801,204 @@ lines = {
 "notes": "",
 "parent_id": "23",
 "tags": PackedStringArray(),
-"text": "You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.",
+"text": "You carefully slide her desk drawer open. There's some paper scraps, some of her watercolor paints, a folded piece of paper, and a book -- her diary?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that.",
+"translation_key": "You carefully slide her desk drawer open. There's some paper scraps, some of her watercolor paints, a folded piece of paper, and a book -- her diary?",
 "type": &"dialogue"
 },
+"241": {
+"id": "241",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"243": {
+"id": "243",
+"next_id": "244",
+"text": "desk_drawer",
+"type": &"title"
+},
+"244": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "know_password"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "244",
+"next_conditional_id": "250",
+"next_id": "245",
+"next_id_after": "252",
+"type": &"condition"
+},
+"245": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "245",
+"next_id": "246",
+"notes": "",
+"parent_id": "244",
+"tags": PackedStringArray(),
+"text": "You pull open the desk drawer. Just a few pens, random knick knacks, and a sticky note that was ripped in half.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You pull open the desk drawer. Just a few pens, random knick knacks, and a sticky note that was ripped in half.",
+"type": &"dialogue"
+},
+"246": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "246",
+"next_id": "247",
+"notes": "",
+"parent_id": "244",
+"tags": PackedStringArray(),
+"text": "The half that remains just says \"password\".",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The half that remains just says \"password\".",
+"type": &"dialogue"
+},
+"247": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "looking_for_password"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "247",
+"next_conditional_id": "252",
+"next_id": "248",
+"next_id_after": "252",
+"parent_id": "244",
+"type": &"condition"
+},
+"248": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "248",
+"next_id": "249",
+"notes": "",
+"parent_id": "247",
+"tags": PackedStringArray(),
+"text": "Well that's no use. Where's the rest of it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Well that's no use. Where's the rest of it?",
+"type": &"dialogue"
+},
+"249": {
+"id": "249",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "looking_for_password"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "252",
+"parent_id": "247",
+"type": &"mutation"
+},
 "25": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
 "id": "25",
+"next_id": "26",
+"notes": "",
+"parent_id": "23",
+"tags": PackedStringArray(),
+"text": "April would totally kill me if I read that...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "April would totally kill me if I read that...",
+"type": &"dialogue"
+},
+"250": {
+"id": "250",
+"next_conditional_id": "252",
+"next_id": "251",
+"next_id_after": "252",
+"type": &"condition"
+},
+"251": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "251",
+"next_id": "252",
+"notes": "",
+"parent_id": "250",
+"tags": PackedStringArray(),
+"text": "You pull open the desk drawer. Just a few pens, random knick knacks, and the ripped sticky note. The other half must have Dad's password on it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You pull open the desk drawer. Just a few pens, random knick knacks, and the ripped sticky note. The other half must have Dad's password on it.",
+"type": &"dialogue"
+},
+"252": {
+"id": "252",
+"is_snippet": false,
+"next_id": "146",
+"type": &"goto"
+},
+"257": {
+"id": "257",
+"next_id": "259",
+"text": "study",
+"type": &"title"
+},
+"259": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "game_ended"
+}, {
+"type": "colon"
+}])
+},
+"id": "259",
+"next_conditional_id": "261",
+"next_id": "260",
+"next_id_after": "261",
+"type": &"condition"
+},
+"26": {
+"id": "26",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -492,23 +2017,270 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "26",
+"next_id": "27",
 "parent_id": "23",
 "type": &"mutation"
 },
-"26": {
-"id": "26",
+"260": {
+"id": "260",
 "is_snippet": false,
-"next_id": "31",
-"parent_id": "23",
+"next_id": "end",
+"parent_id": "259",
+"type": &"goto"
+},
+"261": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "study_locked"
+}, {
+"type": "colon"
+}])
+},
+"id": "261",
+"next_conditional_id": "268",
+"next_id": "262",
+"next_id_after": "268",
+"type": &"condition"
+},
+"262": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "262",
+"next_id": "263",
+"notes": "",
+"parent_id": "261",
+"tags": PackedStringArray(),
+"text": "Mom's old study...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mom's old study...",
+"type": &"dialogue"
+},
+"263": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "263",
+"next_id": "264",
+"notes": "",
+"parent_id": "261",
+"tags": PackedStringArray(),
+"text": "It's locked, like always.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's locked, like always.",
+"type": &"dialogue"
+},
+"264": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key"
+}, {
+"type": "colon"
+}])
+},
+"id": "264",
+"next_conditional_id": "268",
+"next_id": "265",
+"next_id_after": "268",
+"parent_id": "261",
+"type": &"condition"
+},
+"265": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "265",
+"next_id": "266",
+"notes": "",
+"parent_id": "264",
+"tags": PackedStringArray(),
+"text": "Maybe this key fits it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe this key fits it?",
+"type": &"dialogue"
+},
+"266": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "266",
+"next_id": "272",
+"next_id_after": "268",
+"notes": "",
+"parent_id": "264",
+"responses": PackedStringArray("266", "267"),
+"tags": PackedStringArray(),
+"text": "Try it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Try it",
+"type": &"response"
+},
+"267": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "267",
+"next_id": "284",
+"next_id_after": "268",
+"notes": "",
+"parent_id": "264",
+"tags": PackedStringArray(),
+"text": "Leave",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave",
+"type": &"response"
+},
+"268": {
+"id": "268",
+"is_snippet": false,
+"next_id": "284",
 "type": &"goto"
 },
 "27": {
+"id": "27",
+"is_snippet": false,
+"next_id": "32",
+"parent_id": "23",
+"type": &"goto"
+},
+"271": {
+"id": "271",
+"next_id": "272",
+"text": "end_game",
+"type": &"title"
+},
+"272": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "game_ended"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "272",
+"next_conditional_id": "279",
+"next_id": "273",
+"next_id_after": "279",
+"type": &"condition"
+},
+"273": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "27",
-"next_id": "28",
-"next_id_after": "31",
+"id": "273",
+"next_id": "274",
+"notes": "",
+"parent_id": "272",
+"tags": PackedStringArray(),
+"text": "The key clicks into place. The door creaks open...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The key clicks into place. The door creaks open...",
+"type": &"dialogue"
+},
+"274": {
+"id": "274",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "TransitionScreen"
+}, {
+"type": "dot"
+}, {
+"function": "game_over",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "275",
+"parent_id": "272",
+"type": &"mutation"
+},
+"275": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "275",
+"next_id": "276",
+"notes": "",
+"parent_id": "272",
+"tags": PackedStringArray(),
+"text": "Mom's study.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mom's study.",
+"type": &"dialogue"
+},
+"276": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "276",
+"next_id": "277",
+"notes": "",
+"parent_id": "272",
+"tags": PackedStringArray(),
+"text": "April was here.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "April was here.",
+"type": &"dialogue"
+},
+"277": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "277",
+"next_id": "279",
+"notes": "",
+"parent_id": "272",
+"tags": PackedStringArray(),
+"text": "But... where is she now?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But... where is she now?",
+"type": &"dialogue"
+},
+"279": {
+"id": "279",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "game_ended"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "281",
+"type": &"mutation"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"next_id_after": "32",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Leave",
@@ -516,11 +2288,52 @@ lines = {
 "translation_key": "Leave",
 "type": &"response"
 },
-"28": {
-"id": "28",
+"281": {
+"id": "281",
 "is_snippet": false,
-"next_id": "136",
-"parent_id": "27",
+"next_id": "end",
+"type": &"goto"
+},
+"283": {
+"id": "283",
+"next_id": "284",
+"text": "end_dialogue",
+"type": &"title"
+},
+"284": {
+"id": "284",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "frozen"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "285",
+"type": &"mutation"
+},
+"285": {
+"id": "285",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"29": {
+"id": "29",
+"is_snippet": false,
+"next_id": "284",
+"parent_id": "28",
 "type": &"goto"
 },
 "3": {
@@ -536,77 +2349,94 @@ lines = {
 "translation_key": "Just my bed. Looks the same as before.",
 "type": &"dialogue"
 },
-"30": {
-"id": "30",
-"next_id": "31",
+"31": {
+"id": "31",
+"next_id": "32",
 "text": "looking_in_desk",
 "type": &"title"
 },
-"31": {
+"32": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "looking_for_password"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "32",
+"next_conditional_id": "37",
+"next_id": "33",
+"next_id_after": "37",
+"type": &"condition"
+},
+"33": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "31",
-"next_id": "32",
+"id": "33",
+"next_id": "34",
 "notes": "",
+"parent_id": "32",
 "tags": PackedStringArray(),
 "text": "Keep looking through April's desk?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Keep looking through April's desk?",
 "type": &"dialogue"
 },
-"32": {
+"34": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "32",
-"next_id": "38",
-"next_id_after": "35",
+"id": "34",
+"next_id": "55",
+"next_id_after": "37",
 "notes": "",
-"responses": PackedStringArray("32", "33", "34"),
+"parent_id": "32",
+"responses": PackedStringArray("34", "35", "36"),
 "tags": PackedStringArray(),
 "text": "Diary",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Diary",
 "type": &"response"
 },
-"33": {
+"35": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "33",
-"next_id": "48",
-"next_id_after": "35",
+"id": "35",
+"next_id": "65",
+"next_id_after": "37",
 "notes": "",
+"parent_id": "32",
 "tags": PackedStringArray(),
 "text": "Paper",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Paper",
 "type": &"response"
 },
-"34": {
+"36": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "34",
-"next_id": "136",
-"next_id_after": "35",
+"id": "36",
+"next_id": "284",
+"next_id_after": "37",
 "notes": "",
+"parent_id": "32",
 "tags": PackedStringArray(),
 "text": "Stop looking",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Stop looking",
 "type": &"response"
 },
-"35": {
-"id": "35",
-"is_snippet": false,
-"next_id": "136",
-"type": &"goto"
-},
 "37": {
-"id": "37",
-"next_id": "38",
-"text": "diary",
-"type": &"title"
-},
-"38": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -615,35 +2445,44 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "saw_diary"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "string",
-"value": "seen"
+"value": "looking_for_password"
 }, {
 "type": "colon"
 }])
 },
-"id": "38",
-"next_conditional_id": "40",
-"next_id": "39",
-"next_id_after": "45",
+"id": "37",
+"next_conditional_id": "44",
+"next_id": "38",
+"next_id_after": "44",
 "type": &"condition"
 },
+"38": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "38",
+"next_id": "39",
+"notes": "",
+"parent_id": "37",
+"tags": PackedStringArray(),
+"text": "Wait... one of those scraps of paper is the other half of a sticky note.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wait... one of those scraps of paper is the other half of a sticky note.",
+"type": &"dialogue"
+},
 "39": {
-"character": "May",
+"character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "39",
-"next_id": "45",
+"next_id": "47",
+"next_id_after": "44",
 "notes": "",
-"parent_id": "38",
+"parent_id": "37",
+"responses": PackedStringArray("39", "40", "41", "42"),
 "tags": PackedStringArray(),
-"text": "I better not look through any more of this.",
+"text": "Sticky note",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "I better not look through any more of this.",
-"type": &"dialogue"
+"translation_key": "Sticky note",
+"type": &"response"
 },
 "4": {
 "id": "4",
@@ -653,124 +2492,93 @@ lines = {
 "type": &"condition"
 },
 "40": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "40",
-"next_conditional_id": "45",
-"next_id": "41",
-"next_id_after": "45",
-"type": &"condition"
+"next_id": "55",
+"next_id_after": "44",
+"notes": "",
+"parent_id": "37",
+"tags": PackedStringArray(),
+"text": "Diary",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Diary",
+"type": &"response"
 },
 "41": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "41",
-"next_id": "42",
+"next_id": "65",
+"next_id_after": "44",
 "notes": "",
-"parent_id": "40",
+"parent_id": "37",
 "tags": PackedStringArray(),
-"text": "Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting.",
+"text": "Paper",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting.",
-"type": &"dialogue"
+"translation_key": "Paper",
+"type": &"response"
 },
 "42": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "42",
-"next_id": "43",
+"next_id": "284",
+"next_id_after": "44",
 "notes": "",
-"parent_id": "40",
+"parent_id": "37",
 "tags": PackedStringArray(),
-"text": "\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\"",
+"text": "Stop looking",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\"",
-"type": &"dialogue"
-},
-"43": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "43",
-"next_id": "44",
-"notes": "",
-"parent_id": "40",
-"tags": PackedStringArray(),
-"text": "What does that even mean? Where is she?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "What does that even mean? Where is she?",
-"type": &"dialogue"
+"translation_key": "Stop looking",
+"type": &"response"
 },
 "44": {
 "id": "44",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "saw_diary"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "string",
-"value": "seen"
-}]),
-"is_blocking": true
-},
-"next_id": "45",
-"parent_id": "40",
-"type": &"mutation"
-},
-"45": {
-"id": "45",
 "is_snippet": false,
-"next_id": "31",
+"next_id": "284",
 "type": &"goto"
 },
-"47": {
-"id": "47",
-"next_id": "48",
-"text": "paper",
+"46": {
+"id": "46",
+"next_id": "47",
+"text": "sticky_note",
 "type": &"title"
 },
-"48": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "saw_paper"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "string",
-"value": "seen"
-}, {
-"type": "colon"
-}])
+"47": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": "48",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You pick it up. It's a perfect match to the half from Dad's desk.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You pick it up. It's a perfect match to the half from Dad's desk.",
+"type": &"dialogue"
 },
+"48": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
 "id": "48",
-"next_conditional_id": "50",
 "next_id": "49",
-"next_id_after": "54",
-"type": &"condition"
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Yes! It's Dad's password: 04-2012-05-2015.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes! It's Dad's password: 04-2012-05-2015.",
+"type": &"dialogue"
 },
 "49": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
 "id": "49",
-"next_id": "54",
+"next_id": "50",
 "notes": "",
-"parent_id": "48",
 "tags": PackedStringArray(),
-"text": "Could this actually be from Mom?",
+"text": "Wow, Dad should really be able to remember our birthdays without writing it down.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Could this actually be from Mom?",
+"translation_key": "Wow, Dad should really be able to remember our birthdays without writing it down.",
 "type": &"dialogue"
 },
 "5": {
@@ -787,40 +2595,19 @@ lines = {
 "type": &"dialogue"
 },
 "50": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
 "id": "50",
-"next_conditional_id": "54",
 "next_id": "51",
-"next_id_after": "54",
-"type": &"condition"
+"notes": "",
+"tags": PackedStringArray(),
+"text": "So April took it? I wonder what she was looking for on Dad's computer.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So April took it? I wonder what she was looking for on Dad's computer.",
+"type": &"dialogue"
 },
 "51": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
 "id": "51",
-"next_id": "52",
-"notes": "",
-"parent_id": "50",
-"tags": PackedStringArray(),
-"text": "You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read.",
-"type": &"dialogue"
-},
-"52": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "52",
-"next_id": "53",
-"notes": "",
-"parent_id": "50",
-"tags": PackedStringArray(),
-"text": "At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.",
-"type": &"dialogue"
-},
-"53": {
-"id": "53",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -829,49 +2616,102 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "saw_paper"
+"value": "know_password"
 }, {
 "type": "assignment",
 "value": "="
 }, {
-"type": "string",
-"value": "seen"
+"type": "variable",
+"value": "true"
 }]),
 "is_blocking": true
 },
-"next_id": "54",
-"parent_id": "50",
+"next_id": "52",
 "type": &"mutation"
+},
+"52": {
+"id": "52",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
 },
 "54": {
 "id": "54",
-"is_snippet": false,
-"next_id": "31",
-"type": &"goto"
-},
-"56": {
-"id": "56",
-"next_id": "57",
-"text": "aprils_bed",
+"next_id": "55",
+"text": "diary",
 "type": &"title"
 },
-"57": {
-"character": "",
+"55": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_diary"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "seen"
+}, {
+"type": "colon"
+}])
+},
+"id": "55",
+"next_conditional_id": "57",
+"next_id": "56",
+"next_id_after": "62",
+"type": &"condition"
+},
+"56": {
+"character": "May",
 "character_replacements": Array[Dictionary]([]),
-"id": "57",
-"next_id": "58",
+"id": "56",
+"next_id": "62",
 "notes": "",
+"parent_id": "55",
 "tags": PackedStringArray(),
-"text": "April's bed is made, which is weird, considering that it's the middle of the night.",
+"text": "I better not look through any more of this.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "April's bed is made, which is weird, considering that it's the middle of the night.",
+"translation_key": "I better not look through any more of this.",
 "type": &"dialogue"
 },
+"57": {
+"id": "57",
+"next_conditional_id": "62",
+"next_id": "58",
+"next_id_after": "62",
+"type": &"condition"
+},
 "58": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "58",
-"is_snippet": false,
-"next_id": "136",
-"type": &"goto"
+"next_id": "59",
+"notes": "",
+"parent_id": "57",
+"tags": PackedStringArray(),
+"text": "Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe just a quick look at the last thing she wrote? You flip to the back of the book and open to April's loopy handwriting.",
+"type": &"dialogue"
+},
+"59": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "60",
+"notes": "",
+"parent_id": "57",
+"tags": PackedStringArray(),
+"text": "\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"There's no way I can't see this through! Dad will have to understand. May, if you're reading this,  you're so dead by the time I get home. But I'll see you soon.\"",
+"type": &"dialogue"
 },
 "6": {
 "character": "May",
@@ -887,100 +2727,20 @@ lines = {
 "type": &"dialogue"
 },
 "60": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "60",
 "next_id": "61",
-"text": "mays_desk",
-"type": &"title"
+"notes": "",
+"parent_id": "57",
+"tags": PackedStringArray(),
+"text": "What does that even mean? Where is she?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What does that even mean? Where is she?",
+"type": &"dialogue"
 },
 "61": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": &"group",
-"value": Array[Dictionary]([{
-"type": "not"
-}, {
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "saw_mays_desk"
-}])
-}, {
-"type": "colon"
-}])
-},
 "id": "61",
-"next_conditional_id": "64",
-"next_id": "62",
-"next_id_after": "64",
-"type": &"condition"
-},
-"62": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "62",
-"next_id": "63",
-"notes": "",
-"parent_id": "61",
-"tags": PackedStringArray(),
-"text": "Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.",
-"type": &"dialogue"
-},
-"63": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "63",
-"next_id": "64",
-"notes": "",
-"parent_id": "61",
-"tags": PackedStringArray(),
-"text": "There are still loose scraps of paper everywhere.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "There are still loose scraps of paper everywhere.",
-"type": &"dialogue"
-},
-"64": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "64",
-"next_id": "65",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "I'll clean this up.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "I'll clean this up.",
-"type": &"dialogue"
-},
-"65": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "65",
-"next_id": "66",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "...",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "...",
-"type": &"dialogue"
-},
-"66": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "66",
-"next_id": "67",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Later.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Later.",
-"type": &"dialogue"
-},
-"67": {
-"id": "67",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -989,24 +2749,103 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "saw_mays_desk"
+"value": "saw_diary"
 }, {
 "type": "assignment",
 "value": "="
 }, {
-"type": "variable",
-"value": "true"
+"type": "string",
+"value": "seen"
 }]),
 "is_blocking": true
 },
-"next_id": "68",
+"next_id": "62",
+"parent_id": "57",
 "type": &"mutation"
 },
-"68": {
-"id": "68",
+"62": {
+"id": "62",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "32",
 "type": &"goto"
+},
+"64": {
+"id": "64",
+"next_id": "65",
+"text": "paper",
+"type": &"title"
+},
+"65": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_paper"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "seen"
+}, {
+"type": "colon"
+}])
+},
+"id": "65",
+"next_conditional_id": "67",
+"next_id": "66",
+"next_id_after": "71",
+"type": &"condition"
+},
+"66": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "66",
+"next_id": "71",
+"notes": "",
+"parent_id": "65",
+"tags": PackedStringArray(),
+"text": "Could this actually be from Mom?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Could this actually be from Mom?",
+"type": &"dialogue"
+},
+"67": {
+"id": "67",
+"next_conditional_id": "71",
+"next_id": "68",
+"next_id_after": "71",
+"type": &"condition"
+},
+"68": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "68",
+"next_id": "69",
+"notes": "",
+"parent_id": "67",
+"tags": PackedStringArray(),
+"text": "You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You unfold the piece of paper, expecting a sketch. But it's a letter. The writing's in a loopy cursive that you've seen before, but can barely read.",
+"type": &"dialogue"
+},
+"69": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "69",
+"next_id": "70",
+"notes": "",
+"parent_id": "67",
+"tags": PackedStringArray(),
+"text": "At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "At the bottom though, you can unmistakeably see the word \"Mom\". Is this an old letter? You can't tell.",
+"type": &"dialogue"
 },
 "7": {
 "id": "7",
@@ -1034,110 +2873,6 @@ lines = {
 },
 "70": {
 "id": "70",
-"next_id": "71",
-"text": "stairs",
-"type": &"title"
-},
-"71": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "stairs"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "string",
-"value": "seen"
-}, {
-"type": "colon"
-}])
-},
-"id": "71",
-"next_conditional_id": "73",
-"next_id": "72",
-"next_id_after": "80",
-"type": &"condition"
-},
-"72": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "72",
-"next_id": "80",
-"notes": "",
-"parent_id": "71",
-"tags": PackedStringArray(),
-"text": "It's too dark down there...",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "It's too dark down there...",
-"type": &"dialogue"
-},
-"73": {
-"id": "73",
-"next_conditional_id": "80",
-"next_id": "75",
-"next_id_after": "80",
-"type": &"condition"
-},
-"75": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "75",
-"next_id": "76",
-"notes": "",
-"parent_id": "73",
-"tags": PackedStringArray(),
-"text": "Dad?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Dad?",
-"type": &"dialogue"
-},
-"76": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "76",
-"next_id": "77",
-"notes": "",
-"parent_id": "73",
-"tags": PackedStringArray(),
-"text": "...",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "...",
-"type": &"dialogue"
-},
-"77": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "77",
-"next_id": "78",
-"notes": "",
-"parent_id": "73",
-"tags": PackedStringArray(),
-"text": "April?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "April?",
-"type": &"dialogue"
-},
-"78": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "78",
-"next_id": "79",
-"notes": "",
-"parent_id": "73",
-"tags": PackedStringArray(),
-"text": "No response. You're a little too scared to go downstairs in the dark.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "No response. You're a little too scared to go downstairs in the dark.",
-"type": &"dialogue"
-},
-"79": {
-"id": "79",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -1146,7 +2881,7 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "stairs"
+"value": "saw_paper"
 }, {
 "type": "assignment",
 "value": "="
@@ -1156,44 +2891,166 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "80",
-"parent_id": "73",
+"next_id": "71",
+"parent_id": "67",
 "type": &"mutation"
 },
-"80": {
-"id": "80",
+"71": {
+"id": "71",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "32",
 "type": &"goto"
 },
+"73": {
+"id": "73",
+"next_id": "74",
+"text": "aprils_bed",
+"type": &"title"
+},
+"74": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "74",
+"next_id": "75",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "April's bed is made, which is weird, considering that it's the middle of the night.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "April's bed is made, which is weird, considering that it's the middle of the night.",
+"type": &"dialogue"
+},
+"75": {
+"id": "75",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"77": {
+"id": "77",
+"next_id": "78",
+"text": "mays_desk",
+"type": &"title"
+},
+"78": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_mays_desk"
+}])
+}, {
+"type": "colon"
+}])
+},
+"id": "78",
+"next_conditional_id": "81",
+"next_id": "79",
+"next_id_after": "81",
+"type": &"condition"
+},
+"79": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "79",
+"next_id": "80",
+"notes": "",
+"parent_id": "78",
+"tags": PackedStringArray(),
+"text": "Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your desk is full of scrapped drawings that didn't make your wall, and pictures. Your favorite one, of you and April at her 12th birthday dinner with Dad, is framed by the front.",
+"type": &"dialogue"
+},
+"80": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "80",
+"next_id": "81",
+"notes": "",
+"parent_id": "78",
+"tags": PackedStringArray(),
+"text": "There are still loose scraps of paper everywhere.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There are still loose scraps of paper everywhere.",
+"type": &"dialogue"
+},
+"81": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "81",
+"next_id": "82",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'll clean this up.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'll clean this up.",
+"type": &"dialogue"
+},
 "82": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
 "id": "82",
 "next_id": "83",
-"text": "clock",
-"type": &"title"
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"dialogue"
 },
 "83": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
 "id": "83",
-"next_id": "85",
+"next_id": "84",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Way past my bedtime. But no one's here to get me in trouble.",
+"text": "Later.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Way past my bedtime. But no one's here to get me in trouble.",
+"translation_key": "Later.",
 "type": &"dialogue"
+},
+"84": {
+"id": "84",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "saw_mays_desk"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "85",
+"type": &"mutation"
 },
 "85": {
 "id": "85",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "284",
 "type": &"goto"
 },
 "87": {
 "id": "87",
 "next_id": "88",
-"text": "bathroom",
+"text": "stairs",
 "type": &"title"
 },
 "88": {
@@ -1205,13 +3062,13 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "bathroom"
+"value": "stairs"
 }, {
 "type": "comparison",
 "value": "=="
 }, {
-"type": "number",
-"value": 0
+"type": "string",
+"value": "seen"
 }, {
 "type": "colon"
 }])
@@ -1219,128 +3076,89 @@ lines = {
 "id": "88",
 "next_conditional_id": "90",
 "next_id": "89",
-"next_id_after": "98",
+"next_id_after": "97",
 "type": &"condition"
 },
 "89": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
 "id": "89",
-"next_id": "98",
+"next_id": "97",
 "notes": "",
 "parent_id": "88",
 "tags": PackedStringArray(),
-"text": "Everything looks ordinary in here.",
+"text": "It's too dark down there...",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Everything looks ordinary in here.",
+"translation_key": "It's too dark down there...",
 "type": &"dialogue"
 },
 "9": {
 "id": "9",
 "is_snippet": false,
-"next_id": "136",
+"next_id": "284",
 "type": &"goto"
 },
 "90": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "bathroom"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "number",
-"value": 1
-}, {
-"type": "colon"
-}])
-},
 "id": "90",
-"next_conditional_id": "92",
-"next_id": "91",
-"next_id_after": "98",
+"next_conditional_id": "97",
+"next_id": "92",
+"next_id_after": "97",
 "type": &"condition"
 },
-"91": {
+"92": {
 "character": "May",
 "character_replacements": Array[Dictionary]([]),
-"id": "91",
-"next_id": "98",
+"id": "92",
+"next_id": "93",
 "notes": "",
 "parent_id": "90",
 "tags": PackedStringArray(),
-"text": "Nothing to see here.",
+"text": "Dad?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Nothing to see here.",
+"translation_key": "Dad?",
 "type": &"dialogue"
-},
-"92": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "bathroom"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "number",
-"value": 2
-}, {
-"type": "colon"
-}])
-},
-"id": "92",
-"next_conditional_id": "94",
-"next_id": "93",
-"next_id_after": "98",
-"type": &"condition"
 },
 "93": {
-"character": "May",
-"character_replacements": Array[Dictionary]([]),
-"id": "93",
-"next_id": "98",
-"notes": "",
-"parent_id": "92",
-"tags": PackedStringArray(),
-"text": "I should look in one of the other rooms for more clues.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "I should look in one of the other rooms for more clues.",
-"type": &"dialogue"
-},
-"94": {
-"id": "94",
-"next_conditional_id": "98",
-"next_id": "95",
-"next_id_after": "98",
-"type": &"condition"
-},
-"95": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "95",
-"next_id": "98",
+"id": "93",
+"next_id": "94",
 "notes": "",
-"parent_id": "94",
+"parent_id": "90",
 "tags": PackedStringArray(),
 "text": "...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "...",
 "type": &"dialogue"
 },
-"98": {
-"id": "98",
+"94": {
+"character": "May",
+"character_replacements": Array[Dictionary]([]),
+"id": "94",
+"next_id": "95",
+"notes": "",
+"parent_id": "90",
+"tags": PackedStringArray(),
+"text": "April?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "April?",
+"type": &"dialogue"
+},
+"95": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "95",
+"next_id": "96",
+"notes": "",
+"parent_id": "90",
+"tags": PackedStringArray(),
+"text": "No response. You're a little too scared to go downstairs in the dark.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No response. You're a little too scared to go downstairs in the dark.",
+"type": &"dialogue"
+},
+"96": {
+"id": "96",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -1349,29 +3167,31 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "bathroom"
+"value": "stairs"
 }, {
 "type": "assignment",
 "value": "="
 }, {
-"type": "variable",
-"value": "State"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "bathroom"
-}, {
-"type": "operator",
-"value": "+"
-}, {
-"type": "number",
-"value": 1
+"type": "string",
+"value": "seen"
 }]),
 "is_blocking": true
 },
-"next_id": "100",
+"next_id": "97",
+"parent_id": "90",
 "type": &"mutation"
+},
+"97": {
+"id": "97",
+"is_snippet": false,
+"next_id": "284",
+"type": &"goto"
+},
+"99": {
+"id": "99",
+"next_id": "100",
+"text": "clock",
+"type": &"title"
 }
 }
 raw_text = "~ may_bed
@@ -1397,17 +3217,34 @@ if State.snooped:
 
 April's desk. Even though you share a room, April is pretty private. She would be really mad if she knew you were snooping around her stuff.
 - Snoop
-		You carefully slide her desk drawer open. There's some jewelry, some of her watercolor paints, a folded piece of paper, and a book -- her diary? God, she would actually murder you if you read that. 
+		You carefully slide her desk drawer open. There's some paper scraps, some of her watercolor paints, a folded piece of paper, and a book -- her diary?
+		May: April would totally kill me if I read that...
 		set State.snooped = true 
 		=> looking_in_desk
 - Leave
 		=> end_dialogue
 
 ~ looking_in_desk 
-Keep looking through April's desk?
-- Diary => diary 
-- Paper => paper
-- Stop looking => end_dialogue
+if !(State.looking_for_password):
+	Keep looking through April's desk?
+	- Diary => diary 
+	- Paper => paper
+	- Stop looking => end_dialogue
+if State.looking_for_password:
+	Wait... one of those scraps of paper is the other half of a sticky note.
+	- Sticky note => sticky_note
+	- Diary => diary 
+	- Paper => paper
+	- Stop looking => end_dialogue
+	
+=> end_dialogue
+
+~ sticky_note
+You pick it up. It's a perfect match to the half from Dad's desk.
+May: Yes! It's Dad's password\\: 04-2012-05-2015. 
+May: Wow, Dad should really be able to remember our birthdays without writing it down.
+May: So April took it? I wonder what she was looking for on Dad's computer.
+set State.know_password = true
 => end_dialogue
 
 ~ diary
@@ -1481,8 +3318,10 @@ May: He doesn't sleep much though.
 => end_dialogue
 
 ~ closet
+if (State.key):
+	May: I wonder where this key goes...
+	=> end_dialogue
 
-set State.key_location = true
 if !(State.key_location):
 	May: It's just a bunch of Dad's clothes and random boxes of his old stuff.
 else:
@@ -1491,22 +3330,151 @@ else:
 => end_dialogue
 
 ~ key_box
-- Open it. 
+- Open it
 	set State.key = true
 	May: There's a key inside... 
+	You pick the key up.
 	=> end_dialogue
 - Leave it => end_dialogue
 => end_dialogue
 
+~ dads_desk
+if (State.saw_desk == false):
+	set State.saw_desk = true
+	Dad's desk isn't as cluttered as yours or April's. It's just his work computer and an empty coffee cup, plus a notepad with a couple of meaningless notes about work jotted down.
+	- Computer => computer
+	- Desk drawer => desk_drawer
+	- Leave => end_dialogue
+else: 
+	Dad's desk.
+	- Computer => computer
+	- Desk drawer => desk_drawer
+	- Leave => end_dialogue
+=> end_dialogue
 
-~ study
-if State.study_locked:
-	May: Mom's old study...
-	May: It's locked, like always.
+~ computer
+if (State.computer_locked == false):
+	=> unlocked_computer
+if (State.computer_locked):
+	if (State.know_password):
+		May: Dad's computer. There's a password on it.
+		- Guess password? => guess_pass
+		- Put in the password => unlocked_computer
+		- Leave => end_dialogue
+	else:
+		May: Dad's computer. There's a password on it.
+		- Guess password? => guess_pass
+		- Leave => end_dialogue
+=> end_dialogue
+	
+
+~ unlocked_computer
+set State.computer_locked = false
+set State.already_unlocked = State.already_unlocked + 1
+if (State.already_unlocked = 0):
+	Dad's computer is unlocked. The home screen is a picture of you and April toddling around the new house.
+	- Check Dad's email => emails
+	- Play a game
+		% You play Tetris for a while.
+		% You play online chess for a while.
+		% You play Poptropica for a while.
+		% You play minesweeper for a while.
+	- Leave => end_dialogue
+else: 
+	Dad's computer is unlocked.
+	- Check Dad's email => emails
+	- Play a game
+		% You play Tetris for a while.
+		% You play online chess for a while.
+		% You play Poptropica for a while.
+		% You play minesweeper for a while.
+		=> unlocked_computer
+	- Leave => end_dialogue
+	
+=> end_dialogue
+
+~ emails
+Wow, you're a major snooper today. You open Dad's email and scan through the first page. It's mostly work stuff. You notice he recently sent an email to Mom, though.
+- Read it
+	set State.key_location = true
+	May: \"I don't think you should be contacting the girls. April's been asking about it, and you're just confusing her. If you're back again, then you can take the last of your stuff and go. It's been sitting in my closet long enough. After that, we don't want to hear from you again.\" 
+	Wow. You rarely hear Dad sounding angry like that. Mom hasn't contacted you -- did April hear from her and not say anything? 
+	=> unlocked_computer
+- Don't read it
+	May: It's really none of my business...
+=> unlocked_computer
+
+
+~ guess_pass
+if (State.looking_for_password):
+	What would Dad's password be...
+	- 12345
+		May: Wrong. Well, at least Dad doesn't have the most obvious password in the world.
+		=> guess_pass
+	- imstupid
+		May: Wrong. Hm.  He must have a high opinion of himself.
+		=> guess_pass
+	- 050714
+		May: Wrong. Wow, not my birthday? Cold, Dad.
+		=> guess_pass
+	- password
+		May: Wrong. I guess there must be another half to that sticky note.
+		May: It would be pretty dumb to make your password 'password' anyways.
+		=> guess_pass
+	- Stop guessing => end_dialogue
+What would Dad's password be...
+- 12345
+	May: Wrong. Well, at least Dad doesn't have the most obvious password in the world.
+	=> guess_pass
+- imstupid
+	May: Wrong. Hm.  He must have a high opinion of himself.
+	=> guess_pass
+- 050714
+	May: Wrong. Wow, not my birthday? Cold, Dad.
+	=> guess_pass
+- Stop guessing => end_dialogue
 
 => end_dialogue
 
+~ desk_drawer
+if (!State.know_password):
+	You pull open the desk drawer. Just a few pens, random knick knacks, and a sticky note that was ripped in half.
+	The half that remains just says \"password\". 
+	if (!State.looking_for_password):
+		May: Well that's no use. Where's the rest of it?
+		set State.looking_for_password = true
+else:
+	You pull open the desk drawer. Just a few pens, random knick knacks, and the ripped sticky note. The other half must have Dad's password on it.
+=> dads_desk
 
+
+
+
+~ study
+#set State.key = true #for testing only
+if State.game_ended:
+	=> END
+if State.study_locked:
+	May: Mom's old study...
+	May: It's locked, like always.
+	if State.key:
+		May: Maybe this key fits it?
+		- Try it => end_game
+		- Leave => end_dialogue
+=> end_dialogue
+
+
+~ end_game
+if !(State.game_ended):
+	The key clicks into place. The door creaks open...
+	do TransitionScreen.game_over()
+	May: Mom's study. 
+	May: April was here.
+	May: But... where is she now?
+
+set State.game_ended = true
+
+=> END
 
 ~ end_dialogue
 set State.frozen = false

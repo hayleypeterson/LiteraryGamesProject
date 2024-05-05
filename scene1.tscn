@@ -2813,8 +2813,9 @@ layer_2/tile_data = PackedInt32Array(-262139, 655366, 0, -196603, 655366, 1, -5,
 
 [node name="May" parent="." instance=ExtResource("3_q74hk")]
 z_index = 5
-position = Vector2(-11, -48)
+position = Vector2(-11, -49)
 scale = Vector2(1.5, 1.5)
+dialogue = ExtResource("20_nggfk")
 
 [node name="May\'s Bed" type="StaticBody2D" parent="."]
 position = Vector2(-80, 45)
@@ -2850,7 +2851,7 @@ script = ExtResource("8_qpdsl")
 scenechange = "res://hallway.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoortoHall/Area2D"]
-position = Vector2(0, -20)
+position = Vector2(0, -19)
 shape = SubResource("RectangleShape2D_r4wsk")
 
 [node name="April\'s Artwork" type="StaticBody2D" parent="."]

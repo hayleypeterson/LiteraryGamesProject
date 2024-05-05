@@ -6,3 +6,8 @@ res://bathroom.tscn
 res://DoorArea.gd
 res://scripts/CharacterMovement.gd
 res://scripts/state.gd
+res://fade.gd
+res://ColorRect.gd
+res://transition_screen.tscn
+res://transition_screen.gd
+res://helpers/actionable.tscn
