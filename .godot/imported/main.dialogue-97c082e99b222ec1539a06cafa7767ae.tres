@@ -18,7 +18,7 @@ titles = {
 "desk_drawer": "244",
 "diary": "55",
 "emails": "201",
-"end_dialogue": "284",
+"end_dialogue": "287",
 "end_game": "272",
 "guess_pass": "213",
 "key_box": "137",
@@ -55,7 +55,7 @@ lines = {
 "102": {
 "id": "102",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "104": {
@@ -238,7 +238,7 @@ lines = {
 "117": {
 "id": "117",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "119": {
@@ -280,7 +280,7 @@ lines = {
 "122": {
 "id": "122",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "124": {
@@ -328,7 +328,7 @@ lines = {
 "127": {
 "id": "127",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "parent_id": "125",
 "type": &"goto"
 },
@@ -400,7 +400,7 @@ lines = {
 "134": {
 "id": "134",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "136": {
@@ -488,7 +488,7 @@ lines = {
 "141": {
 "id": "141",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "parent_id": "137",
 "type": &"goto"
 },
@@ -496,7 +496,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "142",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "143",
 "notes": "",
 "tags": PackedStringArray(),
@@ -508,7 +508,7 @@ lines = {
 "143": {
 "id": "143",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "145": {
@@ -601,7 +601,7 @@ lines = {
 "15": {
 "id": "15",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "150": {
@@ -622,7 +622,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "151",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "157",
 "notes": "",
 "parent_id": "146",
@@ -685,7 +685,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "156",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "157",
 "notes": "",
 "parent_id": "152",
@@ -698,7 +698,7 @@ lines = {
 "157": {
 "id": "157",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "159": {
@@ -836,7 +836,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "167",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "172",
 "notes": "",
 "parent_id": "163",
@@ -886,7 +886,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "171",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "172",
 "notes": "",
 "parent_id": "168",
@@ -899,7 +899,7 @@ lines = {
 "172": {
 "id": "172",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "175": {
@@ -1111,7 +1111,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "186",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "198",
 "notes": "",
 "parent_id": "178",
@@ -1266,7 +1266,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "196",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "198",
 "notes": "",
 "parent_id": "187",
@@ -1279,7 +1279,7 @@ lines = {
 "198": {
 "id": "198",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "2": {
@@ -1644,7 +1644,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "228",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "229",
 "notes": "",
 "parent_id": "213",
@@ -1784,7 +1784,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "239",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "241",
 "notes": "",
 "tags": PackedStringArray(),
@@ -1809,7 +1809,7 @@ lines = {
 "241": {
 "id": "241",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "243": {
@@ -2127,7 +2127,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "267",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "268",
 "notes": "",
 "parent_id": "264",
@@ -2140,7 +2140,7 @@ lines = {
 "268": {
 "id": "268",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "27": {
@@ -2272,7 +2272,7 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "281",
+"next_id": "280",
 "type": &"mutation"
 },
 "28": {
@@ -2288,20 +2288,62 @@ lines = {
 "translation_key": "Leave",
 "type": &"response"
 },
+"280": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "280",
+"next_id": "281",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You finished this chapter.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You finished this chapter.",
+"type": &"dialogue"
+},
 "281": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "281",
+"next_id": "282",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Thanks for playing!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thanks for playing!",
+"type": &"dialogue"
+},
+"282": {
+"id": "282",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "TransitionScreen"
+}, {
+"type": "dot"
+}, {
+"function": "exit",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "284",
+"type": &"mutation"
+},
+"284": {
+"id": "284",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 },
-"283": {
-"id": "283",
-"next_id": "284",
+"286": {
+"id": "286",
+"next_id": "287",
 "text": "end_dialogue",
 "type": &"title"
 },
-"284": {
-"id": "284",
+"287": {
+"id": "287",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -2320,11 +2362,11 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "285",
+"next_id": "288",
 "type": &"mutation"
 },
-"285": {
-"id": "285",
+"288": {
+"id": "288",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -2332,7 +2374,7 @@ lines = {
 "29": {
 "id": "29",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "parent_id": "28",
 "type": &"goto"
 },
@@ -2358,6 +2400,8 @@ lines = {
 "32": {
 "condition": {
 "expression": Array[Dictionary]([{
+"type": &"group",
+"value": Array[Dictionary]([{
 "type": "not"
 }, {
 "type": &"group",
@@ -2369,6 +2413,18 @@ lines = {
 }, {
 "type": "variable",
 "value": "looking_for_password"
+}])
+}, {
+"type": "and_or",
+"value": "or"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "know_password"
 }])
 }, {
 "type": "colon"
@@ -2426,7 +2482,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "36",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "37",
 "notes": "",
 "parent_id": "32",
@@ -2523,7 +2579,7 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "42",
-"next_id": "284",
+"next_id": "287",
 "next_id_after": "44",
 "notes": "",
 "parent_id": "37",
@@ -2536,7 +2592,7 @@ lines = {
 "44": {
 "id": "44",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "46": {
@@ -2632,7 +2688,7 @@ lines = {
 "52": {
 "id": "52",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "54": {
@@ -2922,7 +2978,7 @@ lines = {
 "75": {
 "id": "75",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "77": {
@@ -3044,7 +3100,7 @@ lines = {
 "85": {
 "id": "85",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "87": {
@@ -3095,7 +3151,7 @@ lines = {
 "9": {
 "id": "9",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "90": {
@@ -3184,7 +3240,7 @@ lines = {
 "97": {
 "id": "97",
 "is_snippet": false,
-"next_id": "284",
+"next_id": "287",
 "type": &"goto"
 },
 "99": {
@@ -3225,7 +3281,7 @@ April's desk. Even though you share a room, April is pretty private. She would b
 		=> end_dialogue
 
 ~ looking_in_desk 
-if !(State.looking_for_password):
+if (!(State.looking_for_password) or State.know_password):
 	Keep looking through April's desk?
 	- Diary => diary 
 	- Paper => paper
@@ -3473,6 +3529,9 @@ if !(State.game_ended):
 	May: But... where is she now?
 
 set State.game_ended = true
+You finished this chapter.
+Thanks for playing!
+do TransitionScreen.exit()
 
 => END
 

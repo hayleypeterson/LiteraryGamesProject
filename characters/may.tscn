@@ -107,7 +107,7 @@ animation = &"walk_down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7.25, 9.25)

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://hwgapnl5y7gq"]
+
+[ext_resource type="Script" path="res://helpers/main_menu.gd" id="1_mcijy"]
+[ext_resource type="Texture2D" uid="uid://caa6y8bxuvjf8" path="res://menuscreen3.png" id="2_an2v4"]
+
+[sub_resource type="Theme" id="Theme_nhtyi"]
+
+[sub_resource type="Theme" id="Theme_q502q"]
+
+[node name="Title Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mcijy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575.5, 322.5)
+scale = Vector2(0.80939, 0.806098)
+texture = ExtResource("2_an2v4")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 430.0
+offset_right = 378.0
+offset_bottom = 494.0
+theme = SubResource("Theme_nhtyi")
+theme_type_variation = &"FlatButton"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 500.0
+offset_right = 379.0
+offset_bottom = 555.0
+theme = SubResource("Theme_q502q")
+theme_type_variation = &"FlatButton"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

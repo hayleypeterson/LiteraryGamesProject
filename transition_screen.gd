@@ -30,3 +30,6 @@ func game_over():
 	color_rect.visible = true
 	end = true
 	animation_player.play("fade_out")
+
+func exit():
+	get_tree().quit()

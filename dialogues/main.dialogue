@@ -29,7 +29,7 @@ April's desk. Even though you share a room, April is pretty private. She would b
 		=> end_dialogue
 
 ~ looking_in_desk 
-if !(State.looking_for_password):
+if (!(State.looking_for_password) or State.know_password):
 	Keep looking through April's desk?
 	- Diary => diary 
 	- Paper => paper
@@ -277,6 +277,9 @@ if !(State.game_ended):
 	May: But... where is she now?
 
 set State.game_ended = true
+You finished this chapter.
+Thanks for playing!
+do TransitionScreen.exit()
 
 => END
 

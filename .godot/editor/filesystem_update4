@@ -11,3 +11,6 @@ res://ColorRect.gd
 res://transition_screen.tscn
 res://transition_screen.gd
 res://helpers/actionable.tscn
+res://helpers/main_menu.tscn
+res://helpers/main_menu.gd
+res://main_menu.tscn
