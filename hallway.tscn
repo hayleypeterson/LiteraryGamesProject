@@ -2765,7 +2765,7 @@ layer_2/z_index = 100
 layer_2/tile_data = PackedInt32Array(-5, 393219, 7, 65531, 393219, 8, 131067, 393219, 9, 8, 3, 10, 65544, 3, 11)
 
 [node name="May" parent="." instance=ExtResource("3_nym1h")]
-position = Vector2(-7, -54)
+position = Vector2(-9, -47)
 scale = Vector2(1.5, 1.5)
 collision_layer = 11
 collision_mask = 9
@@ -2775,11 +2775,13 @@ position = Vector2(5, 7)
 
 [node name="Area2D" type="Area2D" parent="DoorToMaysRoom"]
 position = Vector2(21, -2)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("5_c6ic0")
 scenechange = "res://scene1.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToMaysRoom/Area2D"]
-position = Vector2(-23, -72)
+position = Vector2(-24, -70)
 shape = SubResource("RectangleShape2D_o4r3n")
 
 [node name="Actionable_ Stairs" parent="." instance=ExtResource("6_ruv5x")]

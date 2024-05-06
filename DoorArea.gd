@@ -16,6 +16,8 @@ func _process(_delta):
 			changing = true
 			State.last_scene = State.current_scene
 			State.current_scene = scenechange
+			print(State.last_scene)
+			print(State.current_scene)
 			TransitionScreen.transition()
 			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file(scenechange)

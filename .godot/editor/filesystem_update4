@@ -1,3 +1,4 @@
+res://main_menu.tscn
 res://scene1.tscn
 res://hallway.tscn
 res://characters/may.tscn
@@ -5,8 +6,4 @@ res://dads_room.tscn
 res://bathroom.tscn
 res://transition_screen.tscn
 res://helpers/actionable.tscn
-res://main_menu.tscn
 res://helpers/music.tscn
-res://helpers/main_menu.gd
-res://scripts/CharacterMovement.gd
-res://DoorArea.gd
