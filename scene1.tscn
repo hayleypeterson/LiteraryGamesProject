@@ -2779,7 +2779,7 @@ size = Vector2(20, 7)
 size = Vector2(26, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l87dw"]
-size = Vector2(23, 38)
+size = Vector2(14, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uaodo"]
 size = Vector2(30.5, 20)
@@ -2815,6 +2815,7 @@ layer_2/tile_data = PackedInt32Array(-262139, 655366, 0, -196603, 655366, 1, -5,
 z_index = 5
 position = Vector2(-11, -49)
 scale = Vector2(1.5, 1.5)
+collision_layer = 3
 dialogue = ExtResource("20_nggfk")
 
 [node name="May\'s Bed" type="StaticBody2D" parent="."]
@@ -2847,11 +2848,13 @@ shape = SubResource("RectangleShape2D_0ayad")
 position = Vector2(0, -43)
 
 [node name="Area2D" type="Area2D" parent="DoortoHall"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("8_qpdsl")
 scenechange = "res://hallway.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoortoHall/Area2D"]
-position = Vector2(0, -19)
+position = Vector2(0, -21)
 shape = SubResource("RectangleShape2D_r4wsk")
 
 [node name="April\'s Artwork" type="StaticBody2D" parent="."]
@@ -2862,7 +2865,7 @@ dialogue_resource = ExtResource("20_nggfk")
 dialogue_start = "aprils_art"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="April\'s Artwork/Actionable"]
-position = Vector2(-8.5, 12)
+position = Vector2(-4, 12)
 shape = SubResource("RectangleShape2D_l87dw")
 
 [node name="April\'s Desk" type="StaticBody2D" parent="."]

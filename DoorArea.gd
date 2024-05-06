@@ -3,16 +3,14 @@ extends Area2D
 var entered = false
 var changing = false
 
-func _on_body_entered(body: CharacterBody2D):
+func _on_body_entered(_body: CharacterBody2D):
 	entered = true
 
-
-
-func _on_body_exited(body: CharacterBody2D):
+func _on_body_exited(_body: CharacterBody2D):
 	entered = false
 	
 	
-func _process(delta):
+func _process(_delta):
 	if (entered):
 		if Input.is_action_just_pressed("ui_accept") && changing == false:
 			changing = true

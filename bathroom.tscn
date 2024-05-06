@@ -1486,7 +1486,7 @@ sources/2 = SubResource("TileSetAtlasSource_bci25")
 size = Vector2(20, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3r2n"]
-size = Vector2(53, 66)
+size = Vector2(67.5, 66)
 
 [node name="Node2D" type="Node2D"]
 
@@ -1521,7 +1521,7 @@ dialogue_resource = ExtResource("6_p1021")
 dialogue_start = "bathroom"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(24, 29)
+position = Vector2(31.25, 29)
 shape = SubResource("RectangleShape2D_j3r2n")
 
 [connection signal="body_entered" from="DoorToHall/Area2D" to="DoorToHall/Area2D" method="_on_body_entered"]

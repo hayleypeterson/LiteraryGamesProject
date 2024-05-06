@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="LiteraryGamesProject"
+config/name="The Last Day of April"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://icon.svg"
+config/icon="res://May_icon.png"
 
 [autoload]
 
@@ -22,6 +22,7 @@ Constants="*res://scripts/constants.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://scripts/state.gd"
 TransitionScreen="*res://transition_screen.tscn"
+Music="*res://helpers/music.tscn"
 
 [dialogue_manager]
 

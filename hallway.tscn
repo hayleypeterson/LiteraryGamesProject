@@ -2732,7 +2732,7 @@ size = Vector2(31, 60)
 size = Vector2(22, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k1q6"]
-size = Vector2(26, 55)
+size = Vector2(20, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isrfy"]
 size = Vector2(20, 31)
@@ -2767,6 +2767,8 @@ layer_2/tile_data = PackedInt32Array(-5, 393219, 7, 65531, 393219, 8, 131067, 39
 [node name="May" parent="." instance=ExtResource("3_nym1h")]
 position = Vector2(-7, -54)
 scale = Vector2(1.5, 1.5)
+collision_layer = 11
+collision_mask = 9
 
 [node name="DoorToMaysRoom" type="StaticBody2D" parent="."]
 position = Vector2(5, 7)
@@ -2777,7 +2779,7 @@ script = ExtResource("5_c6ic0")
 scenechange = "res://scene1.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToMaysRoom/Area2D"]
-position = Vector2(-23.5, -70)
+position = Vector2(-23, -72)
 shape = SubResource("RectangleShape2D_o4r3n")
 
 [node name="Actionable_ Stairs" parent="." instance=ExtResource("6_ruv5x")]
@@ -2797,7 +2799,7 @@ script = ExtResource("5_c6ic0")
 scenechange = "res://dads_room.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToDadsRoom/Area2D"]
-position = Vector2(2, 1.5)
+position = Vector2(-3, 6)
 shape = SubResource("RectangleShape2D_2k1q6")
 
 [node name="DoorToBathroom" type="StaticBody2D" parent="."]

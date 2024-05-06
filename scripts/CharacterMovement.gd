@@ -50,7 +50,7 @@ func _ready():
 	
 
 
-func get_input(delta):
+func get_input(_delta):
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = input_direction * movement_speed
 
